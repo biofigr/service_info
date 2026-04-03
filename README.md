@@ -2,7 +2,7 @@
 
 Documents and outputs associated with BioFigR services.
 
-Each folder in this directory corresponds to a specific service and contains
+This directory contains specific service information and
 relevant documentation, example outputs, and supporting materials.
 
 For existing services, pricing, or availability:
