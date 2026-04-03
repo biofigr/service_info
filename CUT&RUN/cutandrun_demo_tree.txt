@@ -1,0 +1,39 @@
+./results/
+├── 01_prealign
+│   ├── pretrim_fastqc
+│   └── trimgalore
+│       └── fastqc
+├── 02_alignment
+│   └── bowtie2
+│       ├── spikein
+│       │   └── log
+│       └── target
+│           ├── log
+│           └── markdup
+├── 03_peak_calling
+│   ├── 01_bam_to_bedgraph
+│   ├── 02_clip_bed
+│   ├── 03_bed_to_bigwig
+│   ├── 04_called_peaks
+│   │   ├── macs2
+│   │   └── seacr
+│   ├── 05_consensus_peaks
+│   └── 06_fragments_from_bams
+├── 04_reporting
+│   ├── consensus_upset_plots
+│   ├── deeptools_heatmaps
+│   │   ├── gene
+│   │   ├── gene_all
+│   │   └── peaks
+│   ├── deeptools_qc
+│   ├── igv
+│   ├── multiqc
+│   │   ├── multiqc_data
+│   │   └── multiqc_plots
+│   │       ├── pdf
+│   │       ├── png
+│   │       └── svg
+│   └── preseq
+└── pipeline_info
+
+37 directories
