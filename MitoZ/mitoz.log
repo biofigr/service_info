@@ -1,0 +1,467 @@
+
+2026-04-06 09:13:03,366 - mitoz.utility.utility - INFO - 
+Found: /home/sstockdale/miniforge3/envs/mitozEnv/bin/spades.py
+
+2026-04-06 09:13:03,368 - mitoz.utility.utility - INFO - 
+Found: /home/sstockdale/miniforge3/envs/mitozEnv/bin/megahit
+
+2026-04-06 09:13:03,368 - mitoz.utility.utility - INFO - 
+all.main() got args:
+Namespace(assembler='megahit', clade='Chordata', data_size_for_mt_assembly='2,0', debug=False, fastq_read_length='150', filter_by_taxa=True, filter_other_para='', fq1='/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz', fq2='/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_2.fastq.gz', func=<function main at 0x7bf214893160>, genetic_code='auto', insert_size='250', kmers=[71], kmers_megahit=['43', '71', '99'], kmers_spades=['auto'], logger=<Logger mitoz.utility.utility (DEBUG)>, memory='50', min_abundance='10', outprefix='out', phred64=False, profiles_dir='/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', requiring_relax='0', requiring_taxa='Chordata', resume_assembly=False, skip_filter=False, slow_search=False, species_name='Test sp.', template_sbt='/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/template.sbt', thread_number='8', tmp_dir=None, workdir='./')
+
+2026-04-06 09:13:03,368 - mitoz.utility.utility - INFO - 
+all.main() got updated args:
+Namespace(assembler='megahit', clade='Chordata', data_size_for_mt_assembly='2,0', debug=False, fastq_read_length='150', filter_by_taxa=True, filter_other_para='', fq1='/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz', fq2='/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_2.fastq.gz', func=<function main at 0x7bf214893160>, genetic_code='auto', insert_size='250', kmers=[71], kmers_megahit=['43', '71', '99'], kmers_spades=['auto'], logger=<Logger mitoz.utility.utility (DEBUG)>, memory='50', min_abundance='10', outprefix='out', phred64=False, profiles_dir='/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', requiring_relax='0', requiring_taxa='Chordata', resume_assembly=False, skip_filter=False, slow_search=False, species_name='Test sp.', template_sbt='/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/template.sbt', thread_number='8', tmp_dir=None, workdir='/home/sstockdale/biofigr/test/mitoz/wd')
+
+2026-04-06 09:13:03,369 - mitoz.utility.utility - INFO - 
+filter.main() get args: {'logger': <Logger mitoz.utility.utility (DEBUG)>, 'fq1': '/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_2.fastq.gz', 'phred64': False, 'outprefix': 'out', 'fastq_read_length': 150, 'data_size_for_mt_assembly': '2,0', 'filter_other_para': '', 'thread_number': '8', 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data', 'workdir_done': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data', 'workdir_log': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data'}
+
+2026-04-06 09:13:03,369 - mitoz.utility.utility - INFO - 
+filter.main() get updated args: {'logger': <Logger mitoz.utility.utility (DEBUG)>, 'fq1': '/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_2.fastq.gz', 'phred64': False, 'outprefix': 'out', 'fastq_read_length': 150, 'data_size_for_mt_assembly': '2,0', 'filter_other_para': '', 'thread_number': '8', 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data', 'workdir_done': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data', 'workdir_log': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data'}
+
+2026-04-06 09:13:03,369 - mitoz.utility.utility - INFO - 
+
+        Paired-end data:
+        fastq_read_length: 150
+        required raw data (Gbp): 2.0
+        fq_records_per_file: 6,666,666
+        lines_per_file * 4: 26,666,664
+        
+
+2026-04-06 09:13:03,369 - mitoz.utility.utility - INFO - 
+
+    # set -vex
+    # set -o pipefail
+    set -e
+
+    mkdir -p /home/sstockdale/biofigr/test/mitoz/wd/clean_data
+    mkdir -p /home/sstockdale/biofigr/test/mitoz/wd/clean_data
+    mkdir -p /home/sstockdale/biofigr/test/mitoz/wd/clean_data
+    cd /home/sstockdale/biofigr/test/mitoz/wd/clean_data
+
+    task_id="FastpTask"
+    done_file="/home/sstockdale/biofigr/test/mitoz/wd/clean_data/$task_id.done"
+    log_o_file="/home/sstockdale/biofigr/test/mitoz/wd/clean_data/$task_id.o.log"
+    log_e_file="/home/sstockdale/biofigr/test/mitoz/wd/clean_data/$task_id.e.log"
+
+    if [ -f $done_file ]; then
+        exit 0
+    fi
+
+    if [ -f "/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz" ] && [ -f "/home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_2.fastq.gz" ];
+    then
+        fastp          -i /home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz         -I /home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_2.fastq.gz          --length_required 50         --reads_to_process 6666666         -o out.clean_R1.fq.gz         -O out.clean_R2.fq.gz         -R "out"         -j out.QC.json         -h out.QC.html         -w 8 && 1>$log_o_file 2>$log_e_file && touch $done_file   
+ 
+    else
+        fastp          -i /home/sstockdale/biofigr/test/mitoz/fastq/SRR5860573_1.fastq.gz          --length_required 50         --reads_to_process 6666666         -o out.clean_R1.fq.gz         -R "out"         -j out.QC.json         -h out.QC.html         -w 8 && 1>$log_o_file 2>$log_e_file && touch $done_file
+    
+    fi
+    
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+
+    sequencing: paired end (150 cycles + 150 cycles)
+
+    before_filtering:
+        total_reads: 13,333,332
+        total_bases: 1,999,999,800
+
+    after_filtering:
+        total_reads: 10,647,430
+        total_bases: 1,571,126,768
+
+    
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+filter.main() returns:
+/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz
+/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+assemble.main() got args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly', 'outprefix': 'out', 'thread_number': '8', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'insert_size': '250', 'fastq_read_length': '150', 'assembler': 'megahit', 'tmp_dir': None, 'kmers': [71], 'kmers_megahit': ['43', '71', '99'], 'kmers_spades': ['auto'], 'memory': '50', 'resume_assembly': False, 'profiles_dir': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', 'slow_search': False, 'filter_by_taxa': True, 'requiring_taxa': 'Chordata', 'requiring_relax': '0', 'abundance_pattern': 'abun\\=([0-9]+\\.*[0-9]*)', 'min_abundance': '10', 'genetic_code': 'auto', 'clade': 'Chordata', 'skip_read_mapping': True}
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+assemble.main() got updated args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly', 'outprefix': 'out', 'thread_number': '8', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'insert_size': '250', 'fastq_read_length': '150', 'assembler': 'megahit', 'tmp_dir': None, 'kmers': [71], 'kmers_megahit': ['43', '71', '99'], 'kmers_spades': ['auto'], 'memory': '50', 'resume_assembly': False, 'profiles_dir': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', 'slow_search': False, 'filter_by_taxa': True, 'requiring_taxa': 'Chordata', 'requiring_relax': '0', 'abundance_pattern': 'abun\\=([0-9]+\\.*[0-9]*)', 'min_abundance': '10', 'genetic_code': '2', 'clade': 'Chordata', 'skip_read_mapping': True}
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+assemble.main() got
+fq1: /home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz
+fq2: /home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+assemble.main() working in /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly
+
+2026-04-06 09:13:37,588 - mitoz.utility.utility - INFO - 
+use_megahit() workdir: /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly
+
+2026-04-06 09:13:37,589 - mitoz.utility.utility - INFO - 
+use_megahit() creating: /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit
+
+2026-04-06 09:13:37,590 - mitoz.utility.utility - INFO - 
+use_megahit() expected assembly_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa
+
+2026-04-06 09:13:37,590 - mitoz.utility.utility - INFO - 
+megahit  --out-dir ./megahit_out  --num-cpu-threads 8 --k-list 43,71,99 --memory 500000000000.0 -1 /home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz -2 /home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz
+
+2026-04-06 09:24:10,851 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/assemble/script/megahit/reformat_megahit_scafSeq.py /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa  /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa.reformatted.fa 
+
+2026-04-06 09:24:11,110 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() got args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly', 'outprefix': 'out.megahit', 'thread_number': '8', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'insert_size': '250', 'fastq_read_length': '150', 'assembler': 'megahit', 'tmp_dir': None, 'kmers': [71], 'kmers_megahit': ['43', '71', '99'], 'kmers_spades': ['auto'], 'memory': '50', 'resume_assembly': False, 'profiles_dir': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', 'slow_search': False, 'filter_by_taxa': True, 'requiring_taxa': 'Chordata', 'requiring_relax': '0', 'abundance_pattern': 'abun\\=([0-9]+\\.*[0-9]*)', 'min_abundance': '10', 'genetic_code': '2', 'clade': 'Chordata', 'skip_read_mapping': True, 'fastafile': '/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa.reformatted.fa'}
+
+2026-04-06 09:24:11,115 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() got updated args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly', 'outprefix': 'out.megahit', 'thread_number': '8', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'insert_size': '250', 'fastq_read_length': '150', 'assembler': 'megahit', 'tmp_dir': None, 'kmers': [71], 'kmers_megahit': ['43', '71', '99'], 'kmers_spades': ['auto'], 'memory': '50', 'resume_assembly': False, 'profiles_dir': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', 'slow_search': False, 'filter_by_taxa': True, 'requiring_taxa': 'Chordata', 'requiring_relax': '0', 'abundance_pattern': 'abun\\=([0-9]+\\.*[0-9]*)', 'min_abundance': '10', 'genetic_code': '2', 'clade': 'Chordata', 'skip_read_mapping': True, 'fastafile': '/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa.reformatted.fa'}
+
+2026-04-06 09:24:11,124 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() nhmmer_profile:
+/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/CDS_HMM/Chordata_CDS.hmm
+
+2026-04-06 09:24:11,132 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() defined_gene_length_f:
+/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/CDS_HMM/Chordata_CDS_length_list
+
+2026-04-06 09:24:11,140 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() MT_annotation_BGI_pro_db:
+/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/MT_database/Animal_CDS_protein.fa
+
+2026-04-06 09:24:11,149 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() workdir:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly
+
+2026-04-06 09:24:11,157 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() result_wdir:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result
+
+2026-04-06 09:24:11,164 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() got assembly_file:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa.reformatted.fa
+
+2026-04-06 09:24:11,172 - mitoz.utility.utility - INFO - 
+findmitoscaf.main() got
+fq1: /home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz
+fq2: /home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz
+
+2026-04-06 09:24:11,180 - mitoz.utility.utility - INFO - 
+We will skip read-mapping during findmitoscaf().
+
+2026-04-06 09:24:11,188 - mitoz.utility.utility - INFO - 
+tiara mt_expected_result_file: mitochondrion_final.contigs.fa.reformatted.fa
+
+2026-04-06 09:24:11,196 - mitoz.utility.utility - INFO - 
+tiara --input /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa.reformatted.fa --output out.megahit.tiara.out.txt  --to_fasta mit pla pro --threads 8  --prob_cutoff 0.65 0.60 --probabilities --min_len 1000
+
+2026-04-06 09:24:52,456 - mitoz.utility.utility - INFO - 
+nhmmer -o out.megahit.hmmout --tblout out.megahit.hmmtblout --cpu 8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/CDS_HMM/Chordata_CDS.hmm mitochondrion_final.contigs.fa.reformatted.fa
+
+2026-04-06 09:24:55,567 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/get_besthit_of_each_CDS_from_nhmmer.py out.megahit.hmmtblout out.megahit.hmmtblout.besthit
+
+2026-04-06 09:24:55,606 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/simlify_nhmmer_tbl_besthit.py out.megahit.hmmtblout.besthit out.megahit.hmmtblout.besthit.sim
+
+2026-04-06 09:24:55,648 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/extract_fasta.py -i mitochondrion_final.contigs.fa.reformatted.fa -q out.megahit.hmmtblout.besthit.sim -o out.megahit.hmmtblout.besthit.sim.fa
+
+2026-04-06 09:24:55,702 - mitoz.utility.utility - INFO - 
+filter_by_nhmmer() return:
+mitochondrion_final.contigs.fa.reformatted.fa, out.megahit.hmmtblout.besthit.sim, out.megahit.hmmtblout.besthit.sim.fa
+
+2026-04-06 09:24:55,720 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/filter_taxonomy_by_CDS_annotation.py -fa out.megahit.hmmtblout.besthit.sim.fa -MTsoft /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/MT_annotation_BGI_V1.32/MT_annotation_BGI.pl -db /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/MT_database/Animal_CDS_protein.fa -thread 8 -genetic_code 2 -requiring_taxa 'Chordata' -relax 0 -WISECONFIGDIR /home/sstockdale/miniforge3/envs/mitozEnv/share/wise2/wisecfg -outf out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fa
+
+2026-04-06 09:25:38,075 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/filter_hmm-besthit-sim.py out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fa out.megahit.hmmtblout.besthit.sim out.megahit.hmmtblout.besthit.sim.filtered-by-taxa
+
+2026-04-06 09:25:38,137 - mitoz.utility.utility - INFO - 
+do_filter_by_taxa() return:
+hmm_outf_tbl_besthit_sim_filtered_by_taxa:out.megahit.hmmtblout.besthit.sim.filtered-by-taxa
+hmm_besthit_filtered_by_taxa_fa: out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fa
+
+2026-04-06 09:25:38,147 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/filter_by_abundance.py 'abun\=([0-9]+\.*[0-9]*)'  10  out.megahit.hmmtblout.besthit.sim.filtered-by-taxa  out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fa 
+
+2026-04-06 09:25:38,393 - mitoz.utility.utility - INFO - 
+gather_result() creating: /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result
+
+2026-04-06 09:25:38,404 - mitoz.utility.utility - INFO - 
+cp -r out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.low_abundance /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result
+
+2026-04-06 09:25:38,428 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/reformat_nhmmer_besthit-sim.py out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.high_abundance_10.0X out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like
+
+2026-04-06 09:25:38,484 - mitoz.utility.utility - INFO - 
+filter_by_abundance() returns hmm_outf_tbl_besthit_sim_fasta_like: out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like
+
+2026-04-06 09:25:38,494 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/scoring_nhmmer_besthit_sim_reformat.py /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/CDS_HMM/Chordata_CDS_length_list out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like 'abun\=([0-9]+\.*[0-9]*)'  out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted
+
+2026-04-06 09:25:38,552 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/pick_seq_from_scoing_result_base_arr_v4.py out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.dotted out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.stat
+
+2026-04-06 09:25:38,592 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/extract_nhmmer_seq_v2.py -f out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked -d mitochondrion_final.contigs.fa.reformatted.fa -o out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa
+
+2026-04-06 09:25:38,896 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/extract_Not-picked-seq.py out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked mitochondrion_final.contigs.fa.reformatted.fa out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked.fa
+
+2026-04-06 09:25:39,145 - mitoz.utility.utility - INFO - 
+cp -r out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked.fa /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result
+
+2026-04-06 09:25:39,165 - mitoz.utility.utility - INFO - 
+select_sequences_by_gene_completeness() return:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa
+
+2026-04-06 09:25:39,175 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/findmitoscaf/script/circle_check.py /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa out.megahit 3
+
+2026-04-06 09:25:39,420 - mitoz.utility.utility - INFO - 
+quick_circle_check() return:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa
+
+2026-04-06 09:25:39,429 - mitoz.utility.utility - INFO - 
+cp -r /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.overlap_information /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result
+
+2026-04-06 09:25:39,451 - mitoz.utility.utility - INFO - 
+use_megahit() found:
+assembly_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/megahit_out/final.contigs.fa
+mt_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa
+
+2026-04-06 09:25:39,460 - mitoz.utility.utility - INFO - 
+assemble.main() found resulting_mt_files:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa
+
+2026-04-06 09:25:39,471 - mitoz.utility.utility - INFO - 
+And related resulting files can be found from:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result
+
+2026-04-06 09:25:39,480 - mitoz.utility.utility - INFO - 
+annotate.main() got args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation', 'outprefix': 'out', 'thread_number': '8', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'fastafiles': ['/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa'], 'profiles_dir': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', 'species_name': 'Test sp.', 'template_sbt': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/template.sbt', 'genetic_code': 'auto', 'clade': 'Chordata', 'mitoz_module_used': 'assemble'}
+
+2026-04-06 09:25:39,489 - mitoz.utility.utility - INFO - 
+annotate.main() got updated args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'workdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation', 'outprefix': 'out', 'thread_number': '8', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'fastafiles': ['/home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa'], 'profiles_dir': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles', 'species_name': 'Test sp.', 'template_sbt': '/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/template.sbt', 'genetic_code': '2', 'clade': 'Chordata', 'mitoz_module_used': 'assemble'}
+
+2026-04-06 09:25:39,498 - mitoz.utility.utility - INFO - 
+annotate.main() will be working in:/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:25:39,506 - mitoz.utility.utility - INFO - 
+Creating workdir:/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:25:39,516 - mitoz.utility.utility - INFO - 
+annotate.main() chdir:/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:25:39,524 - mitoz.utility.utility - INFO - 
+annotate.main() MT_annotation_BGI_pro_db:/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/MT_database/Chordata_CDS_protein.fa
+
+2026-04-06 09:25:39,533 - mitoz.utility.utility - INFO - 
+annotate.main() defined_gene_length_f:/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/CDS_HMM/Chordata_CDS_length_list
+
+2026-04-06 09:25:39,542 - mitoz.utility.utility - INFO - 
+annotate.main() s_rRNA_CM:/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/rRNA_CM/v1.1_12snew.cm
+
+2026-04-06 09:25:39,551 - mitoz.utility.utility - INFO - 
+annotate.main() l_rRNA_CM:/home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/rRNA_CM/v1.1_16snew.cm
+
+2026-04-06 09:25:39,569 - mitoz.utility.utility - INFO - 
+Start to check if the sequence ids are too long (which will not work with BioPython) later.
+
+2026-04-06 09:25:39,578 - mitoz.utility.utility - WARNING - 
+File /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa, the sequence id '>k99_67728': length is okay! And there is topology information 'topology=circular' at the header line!!
+
+2026-04-06 09:25:39,587 - mitoz.utility.utility - INFO - 
+Starting to annotate /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa
+
+2026-04-06 09:25:39,595 - mitoz.utility.utility - INFO - 
+result_wdir for /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/megahit/out.megahit.mitogenome.fa: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/out.out.megahit.mitogenome.fa.result
+
+2026-04-06 09:25:39,603 - mitoz.utility.utility - INFO - 
+working in /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:25:39,612 - mitoz.utility.utility - INFO - 
+annotation_infile: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:25:39,635 - mitoz.utility.utility - INFO - 
+Got topology information for k99_67728: topology=circular
+
+2026-04-06 09:25:39,644 - mitoz.utility.utility - INFO - 
+cds_annotation() chdir to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:25:39,663 - mitoz.utility.utility - INFO - 
+export WISECONFIGDIR=/home/sstockdale/miniforge3/envs/mitozEnv/share/wise2/wisecfg
+perl /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/MT_annotation_BGI_V1.32/MT_annotation_BGI.pl -i /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa -d /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/MT_database/Chordata_CDS_protein.fa -o ./ -g 2 -cpu 8
+
+2026-04-06 09:26:07,003 - mitoz.utility.utility - INFO - 
+rm -rf *.nhr *.nin *.nsq *.ndb *.nto *.not *.ntf formatdb.log *.tblastn.shell *.length *.blast *.blast.filter *.shell *.blast.solar *.blast.solar.filter *.blast.solar.filter.table *.blast.solar.filter.table.nonredundance *.blast.solar.filter.nr *.genewise *.solar.genewise.gff *.solar.genewise.gff.cds
+
+2026-04-06 09:26:07,542 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/prepare_CDSposition.py out_out.megahit.mitogenome.fa_mitoscaf.fa.solar.genewise.gff.cds.position.cds out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position
+
+2026-04-06 09:26:07,600 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/pick_most_related_sp_from_position_cds.py out_out.megahit.mitogenome.fa_mitoscaf.fa.solar.genewise.gff.cds.position.cds /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt 
+
+2026-04-06 09:26:09,557 - mitoz.utility.utility - INFO - 
+sort -k1,1 -k6,6n out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position >out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted
+
+2026-04-06 09:26:09,577 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/revise_CDS_pos_v6.py /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted 2 out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted.revised
+
+2026-04-06 09:26:09,825 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/filter_cds_by_annotated-len.py out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted.revised out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted.revised.filtered 0.8 
+
+2026-04-06 09:26:09,867 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/cds_ft_v2.py out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted.revised.filtered 2 out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.ft
+
+2026-04-06 09:26:09,906 - mitoz.utility.utility - INFO - 
+cds_annotation() chdir back to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:26:09,915 - mitoz.utility.utility - INFO - 
+cds_annotation() return:
+mt_file_cdsft: out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.ft
+annt_most_related_sp_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt
+
+2026-04-06 09:26:09,924 - mitoz.utility.utility - INFO - 
+tRNA_annotation() chdir to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:26:09,933 - mitoz.utility.utility - INFO - 
+## begin tRNA annotation...
+## remove previous tRNA result file (if any)
+rm -rf /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.trna
+
+2026-04-06 09:26:09,954 - mitoz.utility.utility - INFO - 
+cd /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/mitfi
+# and find the cmsearch progrm 
+./detect_platform.sh 
+java -Xmx2048m -jar mitfi.jar -cores 1  -code 2 -evalue 0.001 -onlycutoff /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.k99_67728 >>/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.trna
+
+2026-04-06 09:28:52,356 - mitoz.utility.utility - INFO - 
+rm -rf /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.k99_67728
+
+2026-04-06 09:28:52,377 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/tRNA_ft_mitfi.py /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.trna /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.trna.ft
+
+2026-04-06 09:28:52,414 - mitoz.utility.utility - INFO - 
+tRNA_annotation() chdir back to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:28:52,415 - mitoz.utility.utility - INFO - 
+rRNA_annotation() chdir to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:28:52,415 - mitoz.utility.utility - INFO - 
+cmsearch -g --tblout out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.tbl --cpu 8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/rRNA_CM/v1.1_12snew.cm /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa >out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.out
+
+2026-04-06 09:28:53,148 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/rRNA_ft.py out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.tbl /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.ft
+
+2026-04-06 09:28:53,187 - mitoz.utility.utility - INFO - 
+cmsearch -g --tblout /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.tbl --cpu 8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/rRNA_CM/v1.1_16snew.cm /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa >/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.out
+
+2026-04-06 09:28:55,056 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/rRNA_ft.py /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.tbl /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.ft
+
+2026-04-06 09:28:55,091 - mitoz.utility.utility - INFO - 
+rRNA_annotation() chdir back to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:28:55,101 - mitoz.utility.utility - INFO - 
+rRNA_annotation() return:
+s_rRNA_ft: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.ft
+l_rRNA_ft: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.ft
+
+2026-04-06 09:28:55,110 - mitoz.utility.utility - INFO - 
+combine_annotations_and_find_control_region() chdir to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:28:55,119 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/join_ft.py /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.ft /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.trna.ft /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.ft /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.ft
+
+2026-04-06 09:28:55,165 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/find_contro_region.py -fa_file /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa -PCG_cutoff_file /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/CDS_HMM/Chordata_CDS_length_list -PCG_len_ratio 0.9  -s_rRNA_CM_file /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/rRNA_CM/v1.1_12snew.cm -l_rRNA_CM_file /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/profiles/rRNA_CM/v1.1_16snew.cm -rRNA_len_ratio 0.9  -tRNA_num_min 22  -fea_files out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.ft /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.trna.ft /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.ft /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.ft -CR_len_min 600  -outfile out_out.megahit.mitogenome.fa_mitoscaf.fa.control_region.ft
+
+2026-04-06 09:28:55,411 - mitoz.utility.utility - INFO - 
+cat out_out.megahit.mitogenome.fa_mitoscaf.fa.control_region.ft >> /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl
+
+2026-04-06 09:28:55,429 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/prepare_fsa.py /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa 'Test sp.' 2 /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.fsa
+
+2026-04-06 09:28:55,473 - mitoz.utility.utility - INFO - 
+tbl2asn -t /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/template.sbt -a s -p . -V vb
+
+2026-04-06 09:28:55,574 - mitoz.utility.utility - INFO - 
+/home/sstockdale/miniforge3/envs/mitozEnv/bin/python3.8 /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/annotate/script/genbank_gene_stat_v2.py /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt assemble > summary.txt
+
+2026-04-06 09:28:55,837 - mitoz.utility.utility - INFO - 
+combine_annotations_and_find_control_region() chdir back to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:28:55,842 - mitoz.utility.utility - INFO - 
+combine_annotations_and_find_control_region() return:
+    tbl_file:/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl
+    errorsummary_val_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/errorsummary.val
+    tbl2asn_gbf: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf
+    summary_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/summary.txt
+
+2026-04-06 09:28:55,851 - mitoz.utility.utility - INFO - 
+extract_gene_sequences() chdir to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+
+2026-04-06 09:28:55,860 - mitoz.utility.utility - INFO - 
+mitoz-tools gbseqextractor -f /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf -prefix out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf -types CDS rRNA tRNA wholeseq gene -cds_translation -p -l
+
+2026-04-06 09:28:57,206 - mitoz.utility.utility - INFO - 
+extract_gene_sequences() chdir back to /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation
+
+2026-04-06 09:28:57,216 - mitoz.utility.utility - INFO - 
+gather_result() creating: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/out.out.megahit.mitogenome.fa.result
+
+2026-04-06 09:28:57,224 - mitoz.utility.utility - INFO - 
+cp -r /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/errorsummary.val /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf* /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/summary.txt /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/out.out.megahit.mitogenome.fa.result
+
+2026-04-06 09:28:57,248 - mitoz.utility.utility - INFO - 
+visualize.main() got args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'circos': 'circos', 'gb': '/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf', 'gc': 'no', 'win': 50, 'gc_fill': '128,177,211', 'depth_file': '', 'run_map': 'yes', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'bwa': 'bwa', 'thread': '8', 'samtools': 'samtools', 'opts_samtools': '-a -a', 'depth_fill': '190,186,218', 'cds_color': '141,211,199', 'trna_color': '251,128,114', 'rrna_color': '253,192,134', 'label_color': 'black', 'locus_color': 'black', 'base': 'no', 'bgc': 'white', 'outdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization', 'png': 'yes', 'svg': 'yes'}
+
+2026-04-06 09:28:57,258 - mitoz.utility.utility - INFO - 
+visualize.main() got updated args:
+{'logger': <Logger mitoz.utility.utility (DEBUG)>, 'circos': 'circos', 'gb': '/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf', 'gc': 'no', 'win': 50, 'gc_fill': '128,177,211', 'depth_file': '', 'run_map': 'yes', 'fq1': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R1.fq.gz', 'fq2': '/home/sstockdale/biofigr/test/mitoz/wd/clean_data/out.clean_R2.fq.gz', 'bwa': 'bwa', 'thread': '8', 'samtools': 'samtools', 'opts_samtools': '-a -a', 'depth_fill': '190,186,218', 'cds_color': '141,211,199', 'trna_color': '251,128,114', 'rrna_color': '253,192,134', 'label_color': 'black', 'locus_color': 'black', 'base': 'no', 'bgc': 'white', 'outdir': '/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization', 'png': 'yes', 'svg': 'yes'}
+
+2026-04-06 09:28:57,266 - mitoz.utility.utility - INFO - 
+visualize.main() creating: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization
+
+2026-04-06 09:28:57,276 - mitoz.utility.utility - INFO - 
+visualize.main() chdir to: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization
+
+2026-04-06 09:28:57,284 - mitoz.utility.utility - INFO - 
+sort_gb_by_length():
+in_gb: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf
+out_gb: out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.sortedByLength
+
+2026-04-06 09:28:57,305 - mitoz.utility.utility - INFO - 
+updated args.gb: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.sortedByLength
+
+2026-04-06 09:28:57,315 - mitoz.utility.utility - INFO - 
+circos using this config_file: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/visual_config.txt
+
+2026-04-06 09:28:57,324 - mitoz.utility.utility - INFO - 
+perl /home/sstockdale/miniforge3/envs/mitozEnv/lib/python3.8/site-packages/mitoz/visualize/draw_circos_for_mitogenome_auto_depth.pl --gb /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.sortedByLength --conf /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/visual_config.txt
+
+
+2026-04-06 09:30:57,742 - mitoz.utility.utility - INFO - 
+visualize.main() returns: /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization
+
+2026-04-06 09:30:57,750 - mitoz.utility.utility - INFO - 
+cp -r /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/circos.png /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/circos.svg /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/mt_visualization/circos.depth.txt /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/out.out.megahit.mitogenome.fa.result
+
+2026-04-06 09:30:57,774 - mitoz.utility.utility - INFO - 
+
+Found resulting_gb_files:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa/out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf
+
+2026-04-06 09:30:57,775 - mitoz.utility.utility - INFO - 
+And related resulting files can be found from:
+/home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/out.out.megahit.mitogenome.fa.result
+
+2026-04-06 09:30:57,776 - mitoz.utility.utility - INFO - 
+gather_result() creating: /home/sstockdale/biofigr/test/mitoz/wd/out.result
+
+2026-04-06 09:30:57,776 - mitoz.utility.utility - INFO - 
+cp -r /home/sstockdale/biofigr/test/mitoz/wd/mt_assembly/out.megahit.result /home/sstockdale/biofigr/test/mitoz/wd/mt_annotation/out.out.megahit.mitogenome.fa.result /home/sstockdale/biofigr/test/mitoz/wd/out.result
