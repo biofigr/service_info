@@ -1,0 +1,84 @@
+results
+├── preprocessing
+│   ├── fastp
+│   │   ├── report
+│   │   │   ├── 11S.fastp.json
+│   │   │   ├── 10S.fastp.json
+│   │   │   ├── 11S.fastp.html
+│   │   │   ├── 10S.fastp.html
+│   │   ├── log
+│   │   │   ├── 11S.fastp.log
+│   │   │   ├── 10S.fastp.log
+│   ├── fastqc
+│   │   ├── trim
+│   │   │   ├── 10S_trim_2_fastqc.html
+│   │   │   ├── 11S_trim_1_fastqc.html
+│   │   │   ├── 11S_trim_2_fastqc.html
+│   │   │   ├── 10S_trim_1_fastqc.zip
+│   │   │   ├── 11S_trim_1_fastqc.zip
+│   │   │   ├── 10S_trim_2_fastqc.zip
+│   │   │   ├── 11S_trim_2_fastqc.zip
+│   │   │   ├── 10S_trim_1_fastqc.html
+│   │   ├── raw
+│   │   │   ├── 10S_raw_1_fastqc.html
+│   │   │   ├── 11S_raw_1_fastqc.zip
+│   │   │   ├── 10S_raw_2_fastqc.zip
+│   │   │   ├── 11S_raw_1_fastqc.html
+│   │   │   ├── 10S_raw_2_fastqc.html
+│   │   │   ├── 10S_raw_1_fastqc.zip
+│   │   │   ├── 11S_raw_2_fastqc.html
+│   │   │   ├── 11S_raw_2_fastqc.zip
+├── assembly
+│   ├── assemblers
+│   │   ├── spades
+│   │   │   ├── idxstats
+│   │   │   │   ├── 11S_spades.idxstats
+│   │   │   │   ├── 10S_spades.idxstats
+│   │   │   ├── metaviral
+│   │   │   │   ├── 10S_spades.scaffolds.fa.gz
+│   │   │   │   ├── 11S_spades.assembly.gfa.gz
+│   │   │   │   ├── 10S_spades.assembly.gfa.gz
+│   │   │   │   ├── 10S_spades.contigs.fa.gz
+│   │   │   │   ├── 11S_spades.scaffolds.fa.gz
+│   │   │   │   ├── 11S_spades.contigs.fa.gz
+│   │   │   │   ├── log
+│   │   │   │   │   ├── 10S_spades.spades.log
+│   │   │   │   │   ├── 11S_spades.spades.log
+│   │   │   ├── quast
+│   │   │   │   ├── 10S_spades.tsv
+│   │   │   │   ├── 11S_spades.tsv
+│   │   ├── tools_combined
+│   │   │   ├── raw
+│   │   │   │   ├── 11S.combined.fa
+│   │   │   │   ├── 10S.combined.fa
+│   │   │   ├── prinseq
+│   │   │   │   ├── 10S_bad_out.fasta
+│   │   │   │   ├── 11S_bad_out.fasta
+│   │   │   │   ├── 11S_good_out.fasta
+│   │   │   │   ├── 10S_good_out.fasta
+├── metagenomic_diversity
+│   ├── kaiju
+│   │   ├── 10S.txt
+│   │   ├── 11S.tsv
+│   │   ├── 10S.tsv
+│   │   ├── 11S.txt
+│   ├── krona
+│   │   ├── kraken2.html
+│   │   ├── kaiju.html
+│   ├── kraken2
+│   │   ├── 10S_kraken2.kraken2.report.txt
+│   │   ├── 11S_kraken2.kraken2.report.txt
+├── pipeline_info
+│   ├── nf_core_viralmetagenome_software_mqc_versions.yml
+│   ├── viral-metagenome.cmd.txt
+│   ├── pipeline_dag_2026-04-13_06-50-48.html
+│   ├── slurm_viral-metagenome.log
+│   ├── nextflow
+│   │   ├── 20260413_065042
+│   │   │   ├── viral-metagenome.timeline.html
+│   │   │   ├── viral-metagenome.trace.txt
+│   │   │   ├── viral-metagenome.report.html
+│   ├── viral-metagenome.status.txt
+│   ├── errors-14400.out
+│   ├── params_2026-04-13_06-51-18.json
+│   ├── slurm-14400.out
