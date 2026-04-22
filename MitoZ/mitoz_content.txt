@@ -1,0 +1,184 @@
+results
+├── mt_assembly
+│   ├── megahit
+│   │   ├── plastid_final.contigs.fa.reformatted.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.solar.genewise.gff.cds.position.cds
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.low_abundance
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.dotted
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.ntf
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked
+│   │   ├── out.megahit.hmmtblout.besthit.sim
+│   │   ├── out.megahit.start2end_for-circular-mt-only
+│   │   ├── out.megahit.overlap_information
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.high_abundance_10.0X
+│   │   ├── mitochondrion_final.contigs.fa.reformatted.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.solar.genewise.gff.cds.position.cds.taxa
+│   │   ├── out.megahit.hmmtblout
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.solar.genewise.gff.cds.position.cds.taxa.sorted.uniq
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.ndb
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.not
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.solar.genewise.gff.pep
+│   │   ├── megahit_out
+│   │   │   ├── final.contigs.fa.reformatted.fa
+│   │   │   ├── options.json
+│   │   │   ├── checkpoints.txt
+│   │   │   ├── final.contigs.fa
+│   │   │   ├── intermediate_contigs
+│   │   │   │   ├── k71.final.contigs.fa.info
+│   │   │   │   ├── k71.bubble_seq.fa.info
+│   │   │   │   ├── k71.local.fa.info
+│   │   │   │   ├── k43.contigs.fa
+│   │   │   │   ├── k71.contigs.fa
+│   │   │   │   ├── k43.local.fa
+│   │   │   │   ├── k99.bubble_seq.fa
+│   │   │   │   ├── k43.bubble_seq.fa.info
+│   │   │   │   ├── k99.bubble_seq.fa.info
+│   │   │   │   ├── k43.bubble_seq.fa
+│   │   │   │   ├── k43.addi.fa
+│   │   │   │   ├── k43.addi.fa.info
+│   │   │   │   ├── k43.final.contigs.fa.info
+│   │   │   │   ├── k43.final.contigs.fa
+│   │   │   │   ├── k43.local.fa.info
+│   │   │   │   ├── k99.addi.fa
+│   │   │   │   ├── k99.final.contigs.fa.info
+│   │   │   │   ├── k71.bubble_seq.fa
+│   │   │   │   ├── k71.addi.fa.info
+│   │   │   │   ├── k71.final.contigs.fa
+│   │   │   │   ├── k71.addi.fa
+│   │   │   │   ├── k71.contigs.fa.info
+│   │   │   │   ├── k99.final.contigs.fa
+│   │   │   │   ├── k99.contigs.fa
+│   │   │   │   ├── k71.local.fa
+│   │   │   │   ├── k43.contigs.fa.info
+│   │   │   │   ├── k99.addi.fa.info
+│   │   │   │   ├── k99.contigs.fa.info
+│   │   │   ├── done
+│   │   │   ├── log
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.njs
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.solar.genewise.gff.cds.position.cds.filtered
+│   │   ├── out.megahit.mitogenome.fa
+│   │   ├── out.megahit.hmmtblout.besthit
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked.fa
+│   │   ├── out.megahit.hmmout
+│   │   ├── out.megahit.hmmtblout.besthit.sim.fa.nto
+│   │   ├── log_out.megahit.tiara.out.txt
+│   │   ├── out.megahit.tiara.out.txt
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like
+│   │   ├── prokarya_final.contigs.fa.reformatted.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.stat
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked
+│   ├── out.megahit.result
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.low_abundance
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked
+│   │   ├── out.megahit.overlap_information
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa
+│   │   ├── out.megahit.mitogenome.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked.fa
+├── mitoze_content.txt
+├── mt_annotation
+│   ├── out.out.megahit.mitogenome.fa.result
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.cds_translation.fasta
+│   │   ├── errorsummary.val
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.cds.fasta
+│   │   ├── circos.depth.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.rrna.fasta
+│   │   ├── circos.png
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.fasta
+│   │   ├── summary.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl
+│   │   ├── circos.svg
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.gene.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.trna.fasta
+│   ├── tmp_out_out.megahit.mitogenome.fa_mitoscaf.fa
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.trna.ft
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.cds_translation.fasta
+│   │   ├── errorsummary.val
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted.revised
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf
+│   │   ├── mt_visualization
+│   │   │   ├── circos.features.txt
+│   │   │   ├── circos.sorted.bam
+│   │   │   ├── circos.karyotype.txt
+│   │   │   ├── circos.depth.txt
+│   │   │   ├── circos.dep
+│   │   │   ├── circos.png
+│   │   │   ├── visual_config.txt
+│   │   │   ├── circos.gene.text.txt
+│   │   │   ├── circos.strand.text.txt
+│   │   │   ├── circos.mito.fa
+│   │   │   ├── circos.bam
+│   │   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.sortedByLength
+│   │   │   ├── circos.conf
+│   │   │   ├── circos.svg
+│   │   │   ├── circos.map.sh
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.tbl
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.njs
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.val
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.trna
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.solar.genewise.gff.cds.position.cds.taxa
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.cds.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.fsa
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.solar.genewise.gff.pep
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.rrna.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.ft
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.control_region.ft
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.out
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.ft
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.s-rRNA.tbl
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.position.sorted.revised.filtered
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.cds.ft
+│   │   ├── summary.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.l-rRNA.out
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.sqn
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.gene.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.trna.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.solar.genewise.gff.cds.position.cds
+├── clean_data
+│   ├── out.clean_R1.fq.gz
+│   ├── out.QC.html
+│   ├── FastpTask.o.log
+│   ├── FastpTask.done
+│   ├── FastpTask.e.log
+│   ├── out.QC.json
+│   ├── out.clean_R2.fq.gz
+├── slurm-12248.out
+├── errors-12248.out
+├── mitoz.log
+├── pipeline_info
+├── out.result
+│   ├── out.out.megahit.mitogenome.fa.result
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.cds_translation.fasta
+│   │   ├── errorsummary.val
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.cds.fasta
+│   │   ├── circos.depth.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.most_related_species.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.rrna.fasta
+│   │   ├── circos.png
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.fasta
+│   │   ├── summary.txt
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.tbl
+│   │   ├── circos.svg
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.gene.fasta
+│   │   ├── out_out.megahit.mitogenome.fa_mitoscaf.fa.gbf.trna.fasta
+│   ├── out.megahit.result
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.low_abundance
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked
+│   │   ├── out.megahit.overlap_information
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.picked.fa
+│   │   ├── out.megahit.mitogenome.fa
+│   │   ├── out.megahit.hmmtblout.besthit.sim.filtered-by-taxa.fasta-like.sorted.Not-picked.fa
+├── samplesheet.csv
