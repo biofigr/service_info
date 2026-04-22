@@ -1,0 +1,191 @@
+results
+├── qiime2
+│   ├── input
+│   │   ├── taxonomy.qza
+│   │   ├── table.qza
+│   │   ├── rep-seqs.qza
+│   ├── representative_sequences
+│   │   ├── seven_number_summary.tsv
+│   │   ├── descriptive_stats.tsv
+│   │   ├── rep-seq.fasta
+│   ├── abundance_tables
+│   │   ├── feature-table.biom
+│   │   ├── abs-abund-table-5.tsv
+│   │   ├── abs-abund-table-3.tsv
+│   │   ├── abs-abund-table-4.tsv
+│   │   ├── abs-abund-table-2.tsv
+│   │   ├── feature-table.tsv
+│   │   ├── abs-abund-table-6.tsv
+│   ├── rel_abundance_tables
+│   │   ├── rel-table-3.tsv
+│   │   ├── rel-table-ASV_with-DADA2-tax.tsv
+│   │   ├── rel-table-4.tsv
+│   │   ├── rel-table-5.tsv
+│   │   ├── rel-table-6.tsv
+│   │   ├── rel-table-ASV.tsv
+│   │   ├── rel-table-2.tsv
+├── input
+│   ├── samplesheet.tsv
+├── amplicon_content.txt
+├── summary_report
+│   ├── summary_report.html
+│   ├── stacked_barchart_of_reads.svg
+│   ├── versions.yml
+│   ├── dada2_taxonomic_classification_per_taxonomy_level.svg
+├── cutadapt
+│   ├── first_MiM.trimmed.cutadapt.log
+│   ├── last_MiM.trimmed.cutadapt.log
+│   ├── second_MiM.trimmed.cutadapt.log
+│   ├── cutadapt_summary.tsv
+│   ├── penult_MiM.trimmed.cutadapt.log
+├── treesummarizedexperiment
+│   ├── dada2_TreeSummarizedExperiment.rds
+├── dada2
+│   ├── chunks
+│   │   ├── ASV_post_clustering_filtered.1.ASV_tax.user.tsv
+│   ├── ASV_seqs.fasta
+│   ├── ASV_table.tsv
+│   ├── ASV_tax.user.tsv
+│   ├── DADA2_stats.tsv
+│   ├── args
+│   │   ├── RV_plotQualityProfile.args.txt
+│   │   ├── dada.args.txt
+│   │   ├── learnErrors.args.txt
+│   │   ├── assignTaxonomy.args.txt
+│   │   ├── RV_preprocessed_plotQualityProfile.args.txt
+│   │   ├── FW_preprocessed_plotQualityProfile.args.txt
+│   │   ├── filterAndTrim.args.txt
+│   │   ├── FW_plotQualityProfile.args.txt
+│   │   ├── mergePairs.args.txt
+│   │   ├── removeBimeraDenovo.args.txt
+│   ├── DADA2_table.tsv
+│   ├── DADA2_table.rds
+│   ├── log
+│   │   ├── A.err.log
+│   │   ├── A.dada.log
+│   ├── QC
+│   │   ├── FW_preprocessed_qual_stats.pdf
+│   │   ├── A_1.md.err.pdf
+│   │   ├── A_1.err.convergence.txt
+│   │   ├── RV_qual_stats.pdf
+│   │   ├── A_1.md.err.convergence.txt
+│   │   ├── svg
+│   │   │   ├── RV_preprocessed_qual_stats.svg
+│   │   │   ├── A_2.err.svg
+│   │   │   ├── A_2.md.err.svg
+│   │   │   ├── A_1.err.svg
+│   │   │   ├── RV_qual_stats.svg
+│   │   │   ├── FW_preprocessed_qual_stats.svg
+│   │   │   ├── FW_qual_stats.svg
+│   │   │   ├── A_1.md.err.svg
+│   │   ├── A_2.md.err.pdf
+│   │   ├── A_2.md.err.convergence.txt
+│   │   ├── A_2.err.pdf
+│   │   ├── RV_preprocessed_qual_stats.pdf
+│   │   ├── 4 files were used for RV plotQualityProfile.txt
+│   │   ├── A_2.err.convergence.txt
+│   │   ├── 4 files were used for FW plotQualityProfile.txt
+│   │   ├── FW_qual_stats.pdf
+│   │   ├── A_1.err.pdf
+├── fastqc
+│   ├── first_MiM_2_fastqc.html
+│   ├── second_MiM_1_fastqc.html
+│   ├── first_MiM_1_fastqc.html
+│   ├── second_MiM_2_fastqc.html
+│   ├── penult_MiM_1_fastqc.html
+│   ├── last_MiM_1_fastqc.html
+│   ├── last_MiM_2_fastqc.html
+│   ├── penult_MiM_2_fastqc.html
+├── phyloseq
+│   ├── dada2_phyloseq.rds
+├── pipeline_info
+│   ├── params_2026-01-27_16-15-04.json
+│   ├── software_versions.yml
+│   ├── pipeline_dag_2026-01-27_15-52-01.html
+│   ├── pipeline_dag_2026-01-27_16-14-47.html
+├── overall_summary.tsv
+├── multiqc
+│   ├── multiqc_plots
+│   │   ├── svg
+│   │   │   ├── fastqc-status-check-heatmap.svg
+│   │   │   ├── fastqc_per_base_sequence_quality_plot.svg
+│   │   │   ├── fastqc_sequence_counts_plot-pct.svg
+│   │   │   ├── cutadapt_trimmed_sequences_plot_5_Obs_Exp.svg
+│   │   │   ├── fastqc_per_sequence_gc_content_plot_Percentages.svg
+│   │   │   ├── fastqc_overrepresented_sequences_plot.svg
+│   │   │   ├── cutadapt_filtered_reads_plot-cnt.svg
+│   │   │   ├── fastqc_per_sequence_quality_scores_plot.svg
+│   │   │   ├── fastqc_adapter_content_plot.svg
+│   │   │   ├── cutadapt_filtered_reads_plot-pct.svg
+│   │   │   ├── cutadapt_trimmed_sequences_plot_5_Counts.svg
+│   │   │   ├── fastqc_sequence_length_distribution_plot.svg
+│   │   │   ├── fastqc_per_base_n_content_plot.svg
+│   │   │   ├── fastqc_top_overrepresented_sequences_table.svg
+│   │   │   ├── fastqc_sequence_duplication_levels_plot.svg
+│   │   │   ├── fastqc_sequence_counts_plot-cnt.svg
+│   │   │   ├── fastqc_per_sequence_gc_content_plot_Counts.svg
+│   │   ├── png
+│   │   │   ├── fastqc-status-check-heatmap.png
+│   │   │   ├── fastqc_per_sequence_gc_content_plot_Counts.png
+│   │   │   ├── fastqc_top_overrepresented_sequences_table.png
+│   │   │   ├── fastqc_sequence_counts_plot-pct.png
+│   │   │   ├── cutadapt_trimmed_sequences_plot_5_Obs_Exp.png
+│   │   │   ├── fastqc_per_base_n_content_plot.png
+│   │   │   ├── fastqc_overrepresented_sequences_plot.png
+│   │   │   ├── cutadapt_trimmed_sequences_plot_5_Counts.png
+│   │   │   ├── fastqc_per_base_sequence_quality_plot.png
+│   │   │   ├── fastqc_sequence_duplication_levels_plot.png
+│   │   │   ├── fastqc_per_sequence_quality_scores_plot.png
+│   │   │   ├── fastqc_sequence_length_distribution_plot.png
+│   │   │   ├── fastqc_adapter_content_plot.png
+│   │   │   ├── cutadapt_filtered_reads_plot-cnt.png
+│   │   │   ├── cutadapt_filtered_reads_plot-pct.png
+│   │   │   ├── fastqc_sequence_counts_plot-cnt.png
+│   │   │   ├── fastqc_per_sequence_gc_content_plot_Percentages.png
+│   │   ├── pdf
+│   │   │   ├── fastqc-status-check-heatmap.pdf
+│   │   │   ├── cutadapt_filtered_reads_plot-pct.pdf
+│   │   │   ├── cutadapt_trimmed_sequences_plot_5_Obs_Exp.pdf
+│   │   │   ├── fastqc_sequence_counts_plot-pct.pdf
+│   │   │   ├── fastqc_overrepresented_sequences_plot.pdf
+│   │   │   ├── fastqc_sequence_duplication_levels_plot.pdf
+│   │   │   ├── fastqc_per_base_sequence_quality_plot.pdf
+│   │   │   ├── fastqc_per_sequence_gc_content_plot_Percentages.pdf
+│   │   │   ├── fastqc_per_sequence_gc_content_plot_Counts.pdf
+│   │   │   ├── fastqc_sequence_length_distribution_plot.pdf
+│   │   │   ├── fastqc_per_sequence_quality_scores_plot.pdf
+│   │   │   ├── cutadapt_trimmed_sequences_plot_5_Counts.pdf
+│   │   │   ├── fastqc_sequence_counts_plot-cnt.pdf
+│   │   │   ├── fastqc_per_base_n_content_plot.pdf
+│   │   │   ├── fastqc_adapter_content_plot.pdf
+│   │   │   ├── cutadapt_filtered_reads_plot-cnt.pdf
+│   │   │   ├── fastqc_top_overrepresented_sequences_table.pdf
+│   ├── multiqc_report.html
+│   ├── multiqc_data
+│   │   ├── fastqc_per_base_sequence_quality_plot.txt
+│   │   ├── BETA-multiqc.parquet
+│   │   ├── fastqc_sequence_counts_plot.txt
+│   │   ├── fastqc_sequence_length_distribution_plot.txt
+│   │   ├── fastqc_per_sequence_gc_content_plot_Percentages.txt
+│   │   ├── multiqc.log
+│   │   ├── cutadapt_trimmed_sequences_plot_5_Counts.txt
+│   │   ├── fastqc-status-check-heatmap.txt
+│   │   ├── fastqc_per_sequence_gc_content_plot_Counts.txt
+│   │   ├── multiqc_general_stats.txt
+│   │   ├── multiqc_citations.txt
+│   │   ├── multiqc_fastqc.txt
+│   │   ├── fastqc_per_base_n_content_plot.txt
+│   │   ├── multiqc_cutadapt.txt
+│   │   ├── fastqc_sequence_duplication_levels_plot.txt
+│   │   ├── multiqc_data.json
+│   │   ├── multiqc_sources.txt
+│   │   ├── fastqc_top_overrepresented_sequences_table.txt
+│   │   ├── fastqc_overrepresented_sequences_plot.txt
+│   │   ├── fastqc_per_sequence_quality_scores_plot.txt
+│   │   ├── cutadapt_trimmed_sequences_plot_5_Obs_Exp.txt
+│   │   ├── fastqc_adapter_content_plot.txt
+│   │   ├── cutadapt_filtered_reads_plot.txt
+├── vsearch_cluster
+│   ├── ASV_post_clustering_filtered.fna
+│   ├── ASV_post_clustering_filtered.stats.tsv
+│   ├── ASV_post_clustering_filtered.table.tsv
