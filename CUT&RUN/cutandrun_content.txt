@@ -1,0 +1,350 @@
+results
+├── 01_prealign
+│   ├── pretrim_fastqc
+│   │   ├── H3K27me3_R1_1_fastqc.html
+│   │   ├── H3K27me3_R1_1_fastqc.zip
+│   │   ├── H3K27ac_R1_2_fastqc.zip
+│   │   ├── H3K27ac_R1_1_fastqc.html
+│   │   ├── H3K4me3_R1_2_fastqc.html
+│   │   ├── H3K27me3_R1_2_fastqc.zip
+│   │   ├── H3K27ac_R1_1_fastqc.zip
+│   │   ├── H3K4me3_R1_2_fastqc.zip
+│   │   ├── H3K4me3_R1_1_fastqc.zip
+│   │   ├── H3K4me3_R1_1_fastqc.html
+│   │   ├── H3K27ac_R1_2_fastqc.html
+│   │   ├── H3K27me3_R1_2_fastqc.html
+│   ├── trimgalore
+│   │   ├── H3K27me3_R1_1.fastq.gz_trimming_report.txt
+│   │   ├── H3K27me3_R1_2.fastq.gz_trimming_report.txt
+│   │   ├── H3K27ac_R1_2.fastq.gz_trimming_report.txt
+│   │   ├── fastqc
+│   │   │   ├── H3K4me3_R1_2.trimmed_fastqc.html
+│   │   │   ├── H3K27ac_R1_1.trimmed_fastqc.zip
+│   │   │   ├── H3K4me3_R1_1.trimmed_fastqc.html
+│   │   │   ├── H3K27ac_R1_2.trimmed_fastqc.zip
+│   │   │   ├── H3K4me3_R1_2.trimmed_fastqc.zip
+│   │   │   ├── H3K27ac_R1_1.trimmed_fastqc.html
+│   │   │   ├── H3K4me3_R1_1.trimmed_fastqc.zip
+│   │   │   ├── H3K27ac_R1_2.trimmed_fastqc.html
+│   │   │   ├── H3K27me3_R1_2.trimmed_fastqc.zip
+│   │   │   ├── H3K27me3_R1_1.trimmed_fastqc.zip
+│   │   │   ├── H3K27me3_R1_1.trimmed_fastqc.html
+│   │   │   ├── H3K27me3_R1_2.trimmed_fastqc.html
+│   │   ├── H3K4me3_R1_1.fastq.gz_trimming_report.txt
+│   │   ├── H3K4me3_R1_2.fastq.gz_trimming_report.txt
+│   │   ├── H3K27ac_R1_1.fastq.gz_trimming_report.txt
+├── 04_reporting
+│   ├── consensus_upset_plots
+│   ├── deeptools_heatmaps
+│   │   ├── gene_all
+│   │   │   ├── all_genes.computeMatrix.mat.gz
+│   │   │   ├── all_genes.plotHeatmap.pdf
+│   │   │   ├── all_genes.plotHeatmap.mat.tab
+│   │   │   ├── all_genes.computeMatrix.vals.mat.tab
+│   │   ├── peaks
+│   │   │   ├── H3K4me3_R1.computeMatrix.mat.gz
+│   │   │   ├── H3K4me3_R1.plotHeatmap.mat.tab
+│   │   │   ├── H3K27me3_R1.computeMatrix.vals.mat.tab
+│   │   │   ├── H3K4me3_R1.plotHeatmap.pdf
+│   │   │   ├── H3K27ac_R1.computeMatrix.vals.mat.tab
+│   │   │   ├── H3K27ac_R1.plotHeatmap.pdf
+│   │   │   ├── H3K27ac_R1.plotHeatmap.mat.tab
+│   │   │   ├── H3K27ac_R1.computeMatrix.mat.gz
+│   │   │   ├── H3K27me3_R1.plotHeatmap.pdf
+│   │   │   ├── H3K4me3_R1.computeMatrix.vals.mat.tab
+│   │   │   ├── H3K27me3_R1.computeMatrix.mat.gz
+│   │   │   ├── H3K27me3_R1.plotHeatmap.mat.tab
+│   │   ├── gene
+│   │   │   ├── H3K4me3_R1.computeMatrix.mat.gz
+│   │   │   ├── H3K4me3_R1.plotHeatmap.mat.tab
+│   │   │   ├── H3K27me3_R1.computeMatrix.vals.mat.tab
+│   │   │   ├── H3K4me3_R1.plotHeatmap.pdf
+│   │   │   ├── H3K27ac_R1.computeMatrix.vals.mat.tab
+│   │   │   ├── H3K27ac_R1.plotHeatmap.pdf
+│   │   │   ├── H3K27ac_R1.plotHeatmap.mat.tab
+│   │   │   ├── H3K27ac_R1.computeMatrix.mat.gz
+│   │   │   ├── H3K27me3_R1.plotHeatmap.pdf
+│   │   │   ├── H3K4me3_R1.computeMatrix.vals.mat.tab
+│   │   │   ├── H3K27me3_R1.computeMatrix.mat.gz
+│   │   │   ├── H3K27me3_R1.plotHeatmap.mat.tab
+│   ├── deeptools_qc
+│   │   ├── H3K27me3_R1.plotFingerprint.raw.txt
+│   │   ├── H3K4me3_R1.plotFingerprint.raw.txt
+│   │   ├── all_target_bams.plotPCA.tab
+│   │   ├── H3K27ac_R1.plotFingerprint.pdf
+│   │   ├── H3K27me3_R1.plotFingerprint.qcmetrics.txt
+│   │   ├── all_target_bams.plotPCA.pdf
+│   │   ├── all_target_bams.plotCorrelation.pdf
+│   │   ├── H3K27ac_R1.plotFingerprint.qcmetrics.txt
+│   │   ├── all_bam.bamSummary.npz
+│   │   ├── H3K4me3_R1.plotFingerprint.qcmetrics.txt
+│   │   ├── H3K27ac_R1.plotFingerprint.raw.txt
+│   │   ├── all_target_bams.plotCorrelation.mat.tab
+│   │   ├── H3K4me3_R1.plotFingerprint.pdf
+│   │   ├── H3K27me3_R1.plotFingerprint.pdf
+│   ├── igv
+│   │   ├── genes.bed.bed.gz.tbi
+│   │   ├── H3K4me3_R1.bigWig
+│   │   ├── H3K27ac_R1.bigWig
+│   │   ├── gff.igv.txt
+│   │   ├── H3K27ac_R1.macs2.peaks.cut.bed
+│   │   ├── genome.fa.fai
+│   │   ├── igv_session.xml
+│   │   ├── H3K27ac_R1.seacr.peaks.stringent.bed
+│   │   ├── gtf.igv.txt
+│   │   ├── H3K27me3_R1.bigWig
+│   │   ├── H3K4me3_R1.seacr.peaks.stringent.bed
+│   │   ├── genes.bed.bed.gz
+│   │   ├── H3K27me3_R1.seacr.peaks.stringent.bed
+│   │   ├── H3K4me3_R1.macs2.peaks.cut.bed
+│   │   ├── genome.fa
+│   │   ├── exp_files.txt
+│   │   ├── H3K27me3_R1.macs2.peaks.cut.bed
+│   │   ├── igv_files.txt
+│   ├── preseq
+│   │   ├── H3K27ac_R1.command.log
+│   │   ├── H3K4me3_R1.command.log
+│   │   ├── H3K27me3_R1.command.log
+│   │   ├── H3K27ac_R1.lc_extrap.txt
+│   │   ├── H3K27me3_R1.lc_extrap.txt
+│   │   ├── H3K4me3_R1.lc_extrap.txt
+│   ├── multiqc
+│   │   ├── multiqc_plots
+│   │   │   ├── svg
+│   │   │   │   ├── mqc_primary_peakcounts_plot_1.svg
+│   │   │   │   ├── mqc_consensus_peakcounts_plot_1.svg
+│   │   │   │   ├── mqc_fragment_lengths-plot_1.svg
+│   │   │   │   ├── mqc_fastqc_per_base_n_content_plot-2_1.svg
+│   │   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot-2_1.svg
+│   │   │   │   ├── mqc_fastqc_adapter_content_plot_1.svg
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Counts.svg
+│   │   │   │   ├── mqc_bowtie2_pe_plot-2_1.svg
+│   │   │   │   ├── mqc_picard_deduplication_1.svg
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot_1_pc.svg
+│   │   │   │   ├── mqc_deeptools_fingerprint_plot_1.svg
+│   │   │   │   ├── mqc_bowtie2_pe_plot-2_1_pc.svg
+│   │   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.svg
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot_1.svg
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Counts.svg
+│   │   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot-2_1.svg
+│   │   │   │   ├── mqc_cutadapt_filtered_reads_plot_1.svg
+│   │   │   │   ├── mqc_primary_peakcounts_plot_1_pc.svg
+│   │   │   │   ├── mqc_preseq_complexity_plot_molecules_1.svg
+│   │   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Counts.svg
+│   │   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot-2_1.svg
+│   │   │   │   ├── mqc_bowtie2_pe_plot_1.svg
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1.svg
+│   │   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot_1.svg
+│   │   │   │   ├── mqc_fastqc_per_base_n_content_plot_1.svg
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1_pc.svg
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.svg
+│   │   │   │   ├── mqc_fastqc_sequence_length_distribution_plot_1.svg
+│   │   │   │   ├── mqc_cutadapt_filtered_reads_plot_1_pc.svg
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Percentages.svg
+│   │   │   │   ├── mqc_consensus_peakcounts_plot_1_pc.svg
+│   │   │   │   ├── mqc_bowtie2_pe_plot_1_pc.svg
+│   │   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot_1.svg
+│   │   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot_1.svg
+│   │   │   │   ├── mqc_picard_deduplication_1_pc.svg
+│   │   │   ├── png
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1.png
+│   │   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot_1.png
+│   │   │   │   ├── mqc_consensus_peakcounts_plot_1.png
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot_1.png
+│   │   │   │   ├── mqc_consensus_peakcounts_plot_1_pc.png
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Percentages.png
+│   │   │   │   ├── mqc_bowtie2_pe_plot-2_1.png
+│   │   │   │   ├── mqc_bowtie2_pe_plot_1_pc.png
+│   │   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot-2_1.png
+│   │   │   │   ├── mqc_bowtie2_pe_plot-2_1_pc.png
+│   │   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot_1.png
+│   │   │   │   ├── mqc_primary_peakcounts_plot_1.png
+│   │   │   │   ├── mqc_fastqc_per_base_n_content_plot_1.png
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1_pc.png
+│   │   │   │   ├── mqc_primary_peakcounts_plot_1_pc.png
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot_1_pc.png
+│   │   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot-2_1.png
+│   │   │   │   ├── mqc_picard_deduplication_1_pc.png
+│   │   │   │   ├── mqc_fastqc_sequence_length_distribution_plot_1.png
+│   │   │   │   ├── mqc_cutadapt_filtered_reads_plot_1.png
+│   │   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.png
+│   │   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Counts.png
+│   │   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot_1.png
+│   │   │   │   ├── mqc_fastqc_adapter_content_plot_1.png
+│   │   │   │   ├── mqc_picard_deduplication_1.png
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Counts.png
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.png
+│   │   │   │   ├── mqc_fastqc_per_base_n_content_plot-2_1.png
+│   │   │   │   ├── mqc_deeptools_fingerprint_plot_1.png
+│   │   │   │   ├── mqc_fragment_lengths-plot_1.png
+│   │   │   │   ├── mqc_cutadapt_filtered_reads_plot_1_pc.png
+│   │   │   │   ├── mqc_preseq_complexity_plot_molecules_1.png
+│   │   │   │   ├── mqc_bowtie2_pe_plot_1.png
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Counts.png
+│   │   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot-2_1.png
+│   │   │   ├── pdf
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot_1_pc.pdf
+│   │   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Counts.pdf
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1_pc.pdf
+│   │   │   │   ├── mqc_fastqc_sequence_length_distribution_plot_1.pdf
+│   │   │   │   ├── mqc_primary_peakcounts_plot_1_pc.pdf
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Counts.pdf
+│   │   │   │   ├── mqc_bowtie2_pe_plot_1.pdf
+│   │   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot_1.pdf
+│   │   │   │   ├── mqc_deeptools_fingerprint_plot_1.pdf
+│   │   │   │   ├── mqc_consensus_peakcounts_plot_1.pdf
+│   │   │   │   ├── mqc_primary_peakcounts_plot_1.pdf
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.pdf
+│   │   │   │   ├── mqc_bowtie2_pe_plot_1_pc.pdf
+│   │   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.pdf
+│   │   │   │   ├── mqc_consensus_peakcounts_plot_1_pc.pdf
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Percentages.pdf
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot_1.pdf
+│   │   │   │   ├── mqc_cutadapt_filtered_reads_plot_1_pc.pdf
+│   │   │   │   ├── mqc_bowtie2_pe_plot-2_1.pdf
+│   │   │   │   ├── mqc_fastqc_adapter_content_plot_1.pdf
+│   │   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot_1.pdf
+│   │   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1.pdf
+│   │   │   │   ├── mqc_picard_deduplication_1.pdf
+│   │   │   │   ├── mqc_bowtie2_pe_plot-2_1_pc.pdf
+│   │   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Counts.pdf
+│   │   │   │   ├── mqc_picard_deduplication_1_pc.pdf
+│   │   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot-2_1.pdf
+│   │   │   │   ├── mqc_preseq_complexity_plot_molecules_1.pdf
+│   │   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot_1.pdf
+│   │   │   │   ├── mqc_fastqc_per_base_n_content_plot-2_1.pdf
+│   │   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot-2_1.pdf
+│   │   │   │   ├── mqc_fastqc_per_base_n_content_plot_1.pdf
+│   │   │   │   ├── mqc_cutadapt_filtered_reads_plot_1.pdf
+│   │   │   │   ├── mqc_fragment_lengths-plot_1.pdf
+│   │   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot-2_1.pdf
+│   │   ├── multiqc_report.html
+│   │   ├── multiqc_data
+│   │   │   ├── mqc_fastqc_per_base_n_content_plot-2_1.txt
+│   │   │   ├── multiqc_consensus_peakcounts_plot.txt
+│   │   │   ├── multiqc_picard_dups.txt
+│   │   │   ├── deeptools_plot_fingerprint_counts.txt
+│   │   │   ├── multiqc_fragment_lengths-plot.txt
+│   │   │   ├── multiqc.log
+│   │   │   ├── mqc_picard_deduplication_1.txt
+│   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot-2_1.txt
+│   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot_1.txt
+│   │   │   ├── preseq.txt
+│   │   │   ├── mqc_cutadapt_filtered_reads_plot_1.txt
+│   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Counts.txt
+│   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot-2_1.txt
+│   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Percentages.txt
+│   │   │   ├── mqc_fastqc_sequence_length_distribution_plot_1.txt
+│   │   │   ├── multiqc_general_stats.txt
+│   │   │   ├── mqc_preseq_complexity_plot_molecules_1.txt
+│   │   │   ├── multiqc_fastqc_1.txt
+│   │   │   ├── multiqc_citations.txt
+│   │   │   ├── mqc_fastqc_per_base_sequence_quality_plot-2_1.txt
+│   │   │   ├── multiqc_software_versions.txt
+│   │   │   ├── multiqc_fastqc.txt
+│   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Percentages.txt
+│   │   │   ├── mqc_deeptools_fingerprint_plot_1.txt
+│   │   │   ├── multiqc_bowtie2_1.txt
+│   │   │   ├── mqc_fastqc_per_sequence_quality_scores_plot_1.txt
+│   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot_Counts.txt
+│   │   │   ├── multiqc_cutadapt.txt
+│   │   │   ├── picard_histogram_2.txt
+│   │   │   ├── multiqc_data.json
+│   │   │   ├── multiqc_sources.txt
+│   │   │   ├── mqc_fastqc_per_base_n_content_plot_1.txt
+│   │   │   ├── picard_histogram_1.txt
+│   │   │   ├── picard_histogram.txt
+│   │   │   ├── mqc_fastqc_adapter_content_plot_1.txt
+│   │   │   ├── mqc_bowtie2_pe_plot-2_1.txt
+│   │   │   ├── mqc_fastqc_sequence_counts_plot_1.txt
+│   │   │   ├── mqc_fastqc_per_sequence_gc_content_plot-2_Counts.txt
+│   │   │   ├── mqc_cutadapt_trimmed_sequences_plot_3_Obs_Exp.txt
+│   │   │   ├── multiqc_bowtie2.txt
+│   │   │   ├── multiqc_primary_peakcounts_plot.txt
+│   │   │   ├── mqc_fastqc_sequence_counts_plot-2_1.txt
+│   │   │   ├── mqc_fastqc_sequence_duplication_levels_plot_1.txt
+│   │   │   ├── deeptools_plot_PCA.txt
+│   │   │   ├── mqc_bowtie2_pe_plot_1.txt
+├── 03_peak_calling
+│   ├── 03_bed_to_bigwig
+│   │   ├── H3K4me3_R1.bigWig
+│   │   ├── H3K27ac_R1.bigWig
+│   │   ├── H3K27me3_R1.bigWig
+│   ├── 02_clip_bed
+│   │   ├── H3K4me3_R1.clipped.bedGraph
+│   │   ├── H3K27me3_R1.clipped.bedGraph
+│   │   ├── H3K27ac_R1.clipped.bedGraph
+│   ├── 01_bam_to_bedgraph
+│   │   ├── H3K27ac_R1.sorted.bedGraph
+│   │   ├── H3K27me3_R1.sorted.bedGraph
+│   │   ├── H3K4me3_R1.sorted.bedGraph
+│   ├── 06_fragments_from_bams
+│   │   ├── H3K4me3_R1.frags.len.txt
+│   │   ├── H3K27ac_R1.frags.len.txt
+│   │   ├── H3K27ac_R1.frags.cut.bed
+│   │   ├── H3K4me3_R1.frags.cut.bed
+│   │   ├── H3K27me3_R1.frags.len.txt
+│   │   ├── H3K27me3_R1.frags.cut.bed
+│   ├── 04_called_peaks
+│   │   ├── seacr
+│   │   │   ├── H3K27ac_R1.seacr.peaks.stringent.bed
+│   │   │   ├── H3K4me3_R1.seacr.peaks.stringent.bed
+│   │   │   ├── H3K27me3_R1.seacr.peaks.stringent.bed
+│   │   ├── macs2
+│   │   │   ├── H3K27ac_R1.macs2_summits.bed
+│   │   │   ├── H3K27me3_R1.macs2_peaks.narrowPeak
+│   │   │   ├── H3K4me3_R1.macs2_summits.bed
+│   │   │   ├── H3K4me3_R1.macs2_peaks.xls
+│   │   │   ├── H3K27ac_R1.macs2.peaks.cut.bed
+│   │   │   ├── H3K27ac_R1.macs2_peaks.xls
+│   │   │   ├── H3K4me3_R1.macs2_peaks.narrowPeak
+│   │   │   ├── H3K4me3_R1.macs2.peaks.cut.bed
+│   │   │   ├── H3K27me3_R1.macs2.peaks.cut.bed
+│   │   │   ├── H3K27ac_R1.macs2_peaks.narrowPeak
+│   │   │   ├── H3K27me3_R1.macs2_peaks.xls
+│   │   │   ├── H3K27me3_R1.macs2_summits.bed
+│   ├── 05_consensus_peaks
+│   │   ├── H3K27ac.seacr.consensus.peak_counts.bed
+│   │   ├── H3K27me3.seacr.consensus.peak_counts.bed
+│   │   ├── H3K27ac.seacr.consensus.peaks.awk.bed
+│   │   ├── H3K4me3.seacr.consensus.peaks.awk.bed
+│   │   ├── H3K4me3.seacr.consensus.peak_counts.bed
+│   │   ├── H3K27me3.seacr.consensus.peaks.awk.bed
+├── cutandrun_content.txt
+├── 02_alignment
+│   ├── bowtie2
+│   │   ├── target
+│   │   │   ├── markdup
+│   │   │   │   ├── H3K4me3_R1.idxstats
+│   │   │   │   ├── H3K27me3_R1.idxstats
+│   │   │   │   ├── H3K27me3_R1.target.markdup.sorted.bam.bai
+│   │   │   │   ├── H3K27ac_R1.flagstat
+│   │   │   │   ├── H3K27ac_R1.stats
+│   │   │   │   ├── H3K27me3_R1.target.markdup.sorted.bam
+│   │   │   │   ├── H3K4me3_R1.target.markdup.sorted.bam
+│   │   │   │   ├── H3K27me3_R1.flagstat
+│   │   │   │   ├── H3K27ac_R1.idxstats
+│   │   │   │   ├── H3K27ac_R1.target.markdup.sorted.bam
+│   │   │   │   ├── H3K4me3_R1.flagstat
+│   │   │   │   ├── H3K27ac_R1.target.markdup.sorted.bam.bai
+│   │   │   │   ├── H3K4me3_R1.target.markdup.sorted.bam.bai
+│   │   │   │   ├── H3K4me3_R1.stats
+│   │   │   │   ├── H3K27me3_R1.stats
+│   │   │   ├── log
+│   │   │   │   ├── H3K27me3_R1.bowtie2.log
+│   │   │   │   ├── H3K4me3_R1.bowtie2.log
+│   │   │   │   ├── H3K27ac_R1.bowtie2.log
+│   │   ├── spikein
+│   │   │   ├── log
+│   │   │   │   ├── H3K27me3_R1.spikein.bowtie2.log
+│   │   │   │   ├── H3K27ac_R1.spikein.bowtie2.log
+│   │   │   │   ├── H3K4me3_R1.spikein.bowtie2.log
+├── pipeline_info
+│   ├── samplesheet.valid.csv
+│   ├── pipeline_report.html
+│   ├── software_versions.yml
+│   ├── pipeline_report.txt
+│   ├── local_versions.yml
+│   ├── pipeline_dag_2026-01-06_12-46-43.html
+│   ├── pipeline_dag_2026-01-06_08-15-42.html
+│   ├── pipeline_dag_2026-01-07_10-54-47.html
