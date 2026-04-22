@@ -10,3 +10,6 @@ stephen.stockdale@biofigr.com
 
 For custom analyses or new service requests:
 stephen.stockdale@biofigr.com
+
+Service content text files "{service}_content.txt" were generated using:
+   find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
