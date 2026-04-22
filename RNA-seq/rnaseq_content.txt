@@ -1,0 +1,838 @@
+results
+├── star_salmon
+│   ├── C
+│   │   ├── quant.sf
+│   │   ├── logs
+│   │   │   ├── salmon_quant.log
+│   │   ├── aux_info
+│   │   │   ├── meta_info.json
+│   │   │   ├── expected_bias.gz
+│   │   │   ├── observed_bias_3p.gz
+│   │   │   ├── fld.gz
+│   │   │   ├── observed_bias.gz
+│   │   │   ├── ambig_info.tsv
+│   │   ├── cmd_info.json
+│   │   ├── libParams
+│   │   │   ├── flenDist.txt
+│   │   ├── quant.genes.sf
+│   ├── samtools_stats
+│   │   ├── A.markdup.sorted.bam.stats
+│   │   ├── C.markdup.sorted.bam.stats
+│   │   ├── B.sorted.bam.flagstat
+│   │   ├── C.sorted.bam.idxstats
+│   │   ├── C.sorted.bam.flagstat
+│   │   ├── D.markdup.sorted.bam.flagstat
+│   │   ├── B.markdup.sorted.bam.flagstat
+│   │   ├── B.markdup.sorted.bam.idxstats
+│   │   ├── D.sorted.bam.idxstats
+│   │   ├── A.markdup.sorted.bam.idxstats
+│   │   ├── A.sorted.bam.stats
+│   │   ├── D.markdup.sorted.bam.idxstats
+│   │   ├── D.sorted.bam.stats
+│   │   ├── B.sorted.bam.stats
+│   │   ├── B.markdup.sorted.bam.stats
+│   │   ├── D.markdup.sorted.bam.stats
+│   │   ├── C.markdup.sorted.bam.idxstats
+│   │   ├── D.sorted.bam.flagstat
+│   │   ├── B.sorted.bam.idxstats
+│   │   ├── C.markdup.sorted.bam.flagstat
+│   │   ├── C.sorted.bam.stats
+│   │   ├── A.sorted.bam.idxstats
+│   │   ├── A.sorted.bam.flagstat
+│   │   ├── A.markdup.sorted.bam.flagstat
+│   ├── salmon.merged.gene_counts_length_scaled.tsv
+│   ├── B
+│   │   ├── quant.sf
+│   │   ├── logs
+│   │   │   ├── salmon_quant.log
+│   │   ├── aux_info
+│   │   │   ├── meta_info.json
+│   │   │   ├── expected_bias.gz
+│   │   │   ├── observed_bias_3p.gz
+│   │   │   ├── fld.gz
+│   │   │   ├── observed_bias.gz
+│   │   │   ├── ambig_info.tsv
+│   │   ├── cmd_info.json
+│   │   ├── libParams
+│   │   │   ├── flenDist.txt
+│   │   ├── quant.genes.sf
+│   ├── C.markdup.sorted.bam
+│   ├── salmon.merged.transcript_lengths.tsv
+│   ├── B.markdup.sorted.bam
+│   ├── dupradar
+│   │   ├── box_plot
+│   │   │   ├── B_duprateExpBoxplot.pdf
+│   │   │   ├── C_duprateExpBoxplot.pdf
+│   │   │   ├── D_duprateExpBoxplot.pdf
+│   │   │   ├── A_duprateExpBoxplot.pdf
+│   │   ├── gene_data
+│   │   │   ├── D_dupMatrix.txt
+│   │   │   ├── B_dupMatrix.txt
+│   │   │   ├── C_dupMatrix.txt
+│   │   │   ├── A_dupMatrix.txt
+│   │   ├── histogram
+│   │   │   ├── D_expressionHist.pdf
+│   │   │   ├── B_expressionHist.pdf
+│   │   │   ├── C_expressionHist.pdf
+│   │   │   ├── A_expressionHist.pdf
+│   │   ├── intercepts_slope
+│   │   │   ├── B_intercept_slope.txt
+│   │   │   ├── C_intercept_slope.txt
+│   │   │   ├── D_intercept_slope.txt
+│   │   │   ├── A_intercept_slope.txt
+│   │   ├── scatter_plot
+│   │   │   ├── B_duprateExpDens.pdf
+│   │   │   ├── D_duprateExpDens.pdf
+│   │   │   ├── C_duprateExpDens.pdf
+│   │   │   ├── A_duprateExpDens.pdf
+│   ├── null.merged.transcript.SummarizedExperiment.rds
+│   ├── stringtie
+│   │   ├── A.ballgown
+│   │   │   ├── i2t.ctab
+│   │   │   ├── e2t.ctab
+│   │   │   ├── i_data.ctab
+│   │   │   ├── e_data.ctab
+│   │   │   ├── t_data.ctab
+│   │   ├── B.transcripts.gtf
+│   │   ├── C.transcripts.gtf
+│   │   ├── B.coverage.gtf
+│   │   ├── D.coverage.gtf
+│   │   ├── D.gene.abundance.txt
+│   │   ├── C.gene.abundance.txt
+│   │   ├── D.transcripts.gtf
+│   │   ├── A.transcripts.gtf
+│   │   ├── B.ballgown
+│   │   │   ├── i2t.ctab
+│   │   │   ├── e2t.ctab
+│   │   │   ├── i_data.ctab
+│   │   │   ├── e_data.ctab
+│   │   │   ├── t_data.ctab
+│   │   ├── A.gene.abundance.txt
+│   │   ├── C.ballgown
+│   │   │   ├── i2t.ctab
+│   │   │   ├── e2t.ctab
+│   │   │   ├── i_data.ctab
+│   │   │   ├── e_data.ctab
+│   │   │   ├── t_data.ctab
+│   │   ├── D.ballgown
+│   │   │   ├── i2t.ctab
+│   │   │   ├── e2t.ctab
+│   │   │   ├── i_data.ctab
+│   │   │   ├── e_data.ctab
+│   │   │   ├── t_data.ctab
+│   │   ├── B.gene.abundance.txt
+│   │   ├── C.coverage.gtf
+│   │   ├── A.coverage.gtf
+│   ├── A
+│   │   ├── quant.sf
+│   │   ├── logs
+│   │   │   ├── salmon_quant.log
+│   │   ├── aux_info
+│   │   │   ├── meta_info.json
+│   │   │   ├── expected_bias.gz
+│   │   │   ├── observed_bias_3p.gz
+│   │   │   ├── fld.gz
+│   │   │   ├── observed_bias.gz
+│   │   │   ├── ambig_info.tsv
+│   │   ├── cmd_info.json
+│   │   ├── libParams
+│   │   │   ├── flenDist.txt
+│   │   ├── quant.genes.sf
+│   ├── salmon.merged.transcript_counts.tsv
+│   ├── salmon.merged.gene_lengths.tsv
+│   ├── A.markdup.sorted.bam.bai
+│   ├── D.markdup.sorted.bam.bai
+│   ├── salmon.merged.transcript_tpm.tsv
+│   ├── bigwig
+│   │   ├── B.forward.bigWig
+│   │   ├── C.forward.bigWig
+│   │   ├── B.reverse.bigWig
+│   │   ├── A.reverse.bigWig
+│   │   ├── A.forward.bigWig
+│   │   ├── C.reverse.bigWig
+│   │   ├── D.reverse.bigWig
+│   │   ├── D.forward.bigWig
+│   ├── salmon.merged.gene_counts.tsv
+│   ├── D.markdup.sorted.bam
+│   ├── featurecounts
+│   │   ├── C.biotype_counts_mqc.tsv
+│   │   ├── B.featureCounts.tsv
+│   │   ├── A.featureCounts.tsv
+│   │   ├── B.featureCounts.tsv.summary
+│   │   ├── D.biotype_counts_rrna_mqc.tsv
+│   │   ├── C.biotype_counts_rrna_mqc.tsv
+│   │   ├── C.featureCounts.tsv.summary
+│   │   ├── B.biotype_counts_rrna_mqc.tsv
+│   │   ├── B.biotype_counts_mqc.tsv
+│   │   ├── C.featureCounts.tsv
+│   │   ├── D.biotype_counts_mqc.tsv
+│   │   ├── D.featureCounts.tsv.summary
+│   │   ├── D.featureCounts.tsv
+│   │   ├── A.biotype_counts_mqc.tsv
+│   │   ├── A.biotype_counts_rrna_mqc.tsv
+│   │   ├── A.featureCounts.tsv.summary
+│   ├── B.markdup.sorted.bam.bai
+│   ├── salmon.merged.gene_counts_scaled.tsv
+│   ├── D
+│   │   ├── quant.sf
+│   │   ├── logs
+│   │   │   ├── salmon_quant.log
+│   │   ├── aux_info
+│   │   │   ├── meta_info.json
+│   │   │   ├── expected_bias.gz
+│   │   │   ├── observed_bias_3p.gz
+│   │   │   ├── fld.gz
+│   │   │   ├── observed_bias.gz
+│   │   │   ├── ambig_info.tsv
+│   │   ├── cmd_info.json
+│   │   ├── libParams
+│   │   │   ├── flenDist.txt
+│   │   ├── quant.genes.sf
+│   ├── salmon.merged.gene_tpm.tsv
+│   ├── C.markdup.sorted.bam.bai
+│   ├── null.merged.gene.SummarizedExperiment.rds
+│   ├── deseq2_qc
+│   │   ├── R_sessionInfo.log
+│   │   ├── deseq2.dds.RData
+│   │   ├── deseq2.pca.vals.txt
+│   │   ├── deseq2.plots.pdf
+│   │   ├── size_factors
+│   │   │   ├── B.txt
+│   │   │   ├── A.txt
+│   │   │   ├── deseq2.size_factors.RData
+│   │   │   ├── C.txt
+│   │   │   ├── D.txt
+│   │   ├── deseq2.sample.dists.txt
+│   ├── tx2gene.tsv
+│   ├── picard_metrics
+│   │   ├── C.markdup.sorted.MarkDuplicates.metrics.txt
+│   │   ├── B.markdup.sorted.MarkDuplicates.metrics.txt
+│   │   ├── A.markdup.sorted.MarkDuplicates.metrics.txt
+│   │   ├── D.markdup.sorted.MarkDuplicates.metrics.txt
+│   ├── log
+│   │   ├── D.Log.out
+│   │   ├── D.Log.final.out
+│   │   ├── A.Log.final.out
+│   │   ├── C.SJ.out.tab
+│   │   ├── A.Log.out
+│   │   ├── C.Log.out
+│   │   ├── D.SJ.out.tab
+│   │   ├── B.Log.out
+│   │   ├── A.SJ.out.tab
+│   │   ├── A.Log.progress.out
+│   │   ├── B.Log.progress.out
+│   │   ├── C.Log.progress.out
+│   │   ├── B.SJ.out.tab
+│   │   ├── D.Log.progress.out
+│   │   ├── B.Log.final.out
+│   │   ├── C.Log.final.out
+│   ├── A.markdup.sorted.bam
+│   ├── qualimap
+│   │   ├── C
+│   │   │   ├── images_qualimapReport
+│   │   │   │   ├── Coverage Profile Along Genes (High).png
+│   │   │   │   ├── Transcript coverage histogram.png
+│   │   │   │   ├── Junction Analysis.png
+│   │   │   │   ├── Coverage Profile Along Genes (Total).png
+│   │   │   │   ├── Coverage Profile Along Genes (Low).png
+│   │   │   │   ├── Reads Genomic Origin.png
+│   │   │   ├── qualimapReport.html
+│   │   │   ├── css
+│   │   │   │   ├── minus.png
+│   │   │   │   ├── up-pressed.png
+│   │   │   │   ├── file.png
+│   │   │   │   ├── basic.css
+│   │   │   │   ├── agogo.css
+│   │   │   │   ├── doctools.js
+│   │   │   │   ├── comment-bright.png
+│   │   │   │   ├── searchtools.js
+│   │   │   │   ├── websupport.js
+│   │   │   │   ├── ajax-loader.gif
+│   │   │   │   ├── comment-close.png
+│   │   │   │   ├── qualimap_logo_small.png
+│   │   │   │   ├── jquery.js
+│   │   │   │   ├── pygments.css
+│   │   │   │   ├── bgtop.png
+│   │   │   │   ├── down-pressed.png
+│   │   │   │   ├── down.png
+│   │   │   │   ├── report.css
+│   │   │   │   ├── comment.png
+│   │   │   │   ├── underscore.js
+│   │   │   │   ├── up.png
+│   │   │   │   ├── bgfooter.png
+│   │   │   │   ├── plus.png
+│   │   │   ├── raw_data_qualimapReport
+│   │   │   │   ├── coverage_profile_along_genes_(high).txt
+│   │   │   │   ├── coverage_profile_along_genes_(low).txt
+│   │   │   │   ├── coverage_profile_along_genes_(total).txt
+│   │   │   ├── rnaseq_qc_results.txt
+│   │   ├── B
+│   │   │   ├── images_qualimapReport
+│   │   │   │   ├── Coverage Profile Along Genes (High).png
+│   │   │   │   ├── Transcript coverage histogram.png
+│   │   │   │   ├── Junction Analysis.png
+│   │   │   │   ├── Coverage Profile Along Genes (Total).png
+│   │   │   │   ├── Coverage Profile Along Genes (Low).png
+│   │   │   │   ├── Reads Genomic Origin.png
+│   │   │   ├── qualimapReport.html
+│   │   │   ├── css
+│   │   │   │   ├── minus.png
+│   │   │   │   ├── up-pressed.png
+│   │   │   │   ├── file.png
+│   │   │   │   ├── basic.css
+│   │   │   │   ├── agogo.css
+│   │   │   │   ├── doctools.js
+│   │   │   │   ├── comment-bright.png
+│   │   │   │   ├── searchtools.js
+│   │   │   │   ├── websupport.js
+│   │   │   │   ├── ajax-loader.gif
+│   │   │   │   ├── comment-close.png
+│   │   │   │   ├── qualimap_logo_small.png
+│   │   │   │   ├── jquery.js
+│   │   │   │   ├── pygments.css
+│   │   │   │   ├── bgtop.png
+│   │   │   │   ├── down-pressed.png
+│   │   │   │   ├── down.png
+│   │   │   │   ├── report.css
+│   │   │   │   ├── comment.png
+│   │   │   │   ├── underscore.js
+│   │   │   │   ├── up.png
+│   │   │   │   ├── bgfooter.png
+│   │   │   │   ├── plus.png
+│   │   │   ├── raw_data_qualimapReport
+│   │   │   │   ├── coverage_profile_along_genes_(high).txt
+│   │   │   │   ├── coverage_profile_along_genes_(low).txt
+│   │   │   │   ├── coverage_profile_along_genes_(total).txt
+│   │   │   ├── rnaseq_qc_results.txt
+│   │   ├── A
+│   │   │   ├── images_qualimapReport
+│   │   │   │   ├── Coverage Profile Along Genes (High).png
+│   │   │   │   ├── Transcript coverage histogram.png
+│   │   │   │   ├── Junction Analysis.png
+│   │   │   │   ├── Coverage Profile Along Genes (Total).png
+│   │   │   │   ├── Coverage Profile Along Genes (Low).png
+│   │   │   │   ├── Reads Genomic Origin.png
+│   │   │   ├── qualimapReport.html
+│   │   │   ├── css
+│   │   │   │   ├── minus.png
+│   │   │   │   ├── up-pressed.png
+│   │   │   │   ├── file.png
+│   │   │   │   ├── basic.css
+│   │   │   │   ├── agogo.css
+│   │   │   │   ├── doctools.js
+│   │   │   │   ├── comment-bright.png
+│   │   │   │   ├── searchtools.js
+│   │   │   │   ├── websupport.js
+│   │   │   │   ├── ajax-loader.gif
+│   │   │   │   ├── comment-close.png
+│   │   │   │   ├── qualimap_logo_small.png
+│   │   │   │   ├── jquery.js
+│   │   │   │   ├── pygments.css
+│   │   │   │   ├── bgtop.png
+│   │   │   │   ├── down-pressed.png
+│   │   │   │   ├── down.png
+│   │   │   │   ├── report.css
+│   │   │   │   ├── comment.png
+│   │   │   │   ├── underscore.js
+│   │   │   │   ├── up.png
+│   │   │   │   ├── bgfooter.png
+│   │   │   │   ├── plus.png
+│   │   │   ├── raw_data_qualimapReport
+│   │   │   │   ├── coverage_profile_along_genes_(high).txt
+│   │   │   │   ├── coverage_profile_along_genes_(low).txt
+│   │   │   │   ├── coverage_profile_along_genes_(total).txt
+│   │   │   ├── rnaseq_qc_results.txt
+│   │   ├── D
+│   │   │   ├── images_qualimapReport
+│   │   │   │   ├── Coverage Profile Along Genes (High).png
+│   │   │   │   ├── Transcript coverage histogram.png
+│   │   │   │   ├── Junction Analysis.png
+│   │   │   │   ├── Coverage Profile Along Genes (Total).png
+│   │   │   │   ├── Coverage Profile Along Genes (Low).png
+│   │   │   │   ├── Reads Genomic Origin.png
+│   │   │   ├── qualimapReport.html
+│   │   │   ├── css
+│   │   │   │   ├── minus.png
+│   │   │   │   ├── up-pressed.png
+│   │   │   │   ├── file.png
+│   │   │   │   ├── basic.css
+│   │   │   │   ├── agogo.css
+│   │   │   │   ├── doctools.js
+│   │   │   │   ├── comment-bright.png
+│   │   │   │   ├── searchtools.js
+│   │   │   │   ├── websupport.js
+│   │   │   │   ├── ajax-loader.gif
+│   │   │   │   ├── comment-close.png
+│   │   │   │   ├── qualimap_logo_small.png
+│   │   │   │   ├── jquery.js
+│   │   │   │   ├── pygments.css
+│   │   │   │   ├── bgtop.png
+│   │   │   │   ├── down-pressed.png
+│   │   │   │   ├── down.png
+│   │   │   │   ├── report.css
+│   │   │   │   ├── comment.png
+│   │   │   │   ├── underscore.js
+│   │   │   │   ├── up.png
+│   │   │   │   ├── bgfooter.png
+│   │   │   │   ├── plus.png
+│   │   │   ├── raw_data_qualimapReport
+│   │   │   │   ├── coverage_profile_along_genes_(high).txt
+│   │   │   │   ├── coverage_profile_along_genes_(low).txt
+│   │   │   │   ├── coverage_profile_along_genes_(total).txt
+│   │   │   ├── rnaseq_qc_results.txt
+│   ├── rseqc
+│   │   ├── inner_distance
+│   │   │   ├── pdf
+│   │   │   │   ├── C.inner_distance_plot.pdf
+│   │   │   │   ├── D.inner_distance_plot.pdf
+│   │   │   │   ├── A.inner_distance_plot.pdf
+│   │   │   │   ├── B.inner_distance_plot.pdf
+│   │   │   ├── txt
+│   │   │   │   ├── B.inner_distance.txt
+│   │   │   │   ├── A.inner_distance.txt
+│   │   │   │   ├── D.inner_distance.txt
+│   │   │   │   ├── A.inner_distance_freq.txt
+│   │   │   │   ├── C.inner_distance_freq.txt
+│   │   │   │   ├── C.inner_distance.txt
+│   │   │   │   ├── D.inner_distance_mean.txt
+│   │   │   │   ├── D.inner_distance_freq.txt
+│   │   │   │   ├── A.inner_distance_mean.txt
+│   │   │   │   ├── C.inner_distance_mean.txt
+│   │   │   │   ├── B.inner_distance_freq.txt
+│   │   │   │   ├── B.inner_distance_mean.txt
+│   │   │   ├── rscript
+│   │   │   │   ├── D.inner_distance_plot.r
+│   │   │   │   ├── A.inner_distance_plot.r
+│   │   │   │   ├── B.inner_distance_plot.r
+│   │   │   │   ├── C.inner_distance_plot.r
+│   │   ├── read_distribution
+│   │   │   ├── C.read_distribution.txt
+│   │   │   ├── D.read_distribution.txt
+│   │   │   ├── B.read_distribution.txt
+│   │   │   ├── A.read_distribution.txt
+│   │   ├── read_duplication
+│   │   │   ├── pdf
+│   │   │   │   ├── D.DupRate_plot.pdf
+│   │   │   │   ├── A.DupRate_plot.pdf
+│   │   │   │   ├── B.DupRate_plot.pdf
+│   │   │   │   ├── C.DupRate_plot.pdf
+│   │   │   ├── xls
+│   │   │   │   ├── C.seq.DupRate.xls
+│   │   │   │   ├── A.seq.DupRate.xls
+│   │   │   │   ├── B.pos.DupRate.xls
+│   │   │   │   ├── B.seq.DupRate.xls
+│   │   │   │   ├── A.pos.DupRate.xls
+│   │   │   │   ├── D.seq.DupRate.xls
+│   │   │   │   ├── D.pos.DupRate.xls
+│   │   │   │   ├── C.pos.DupRate.xls
+│   │   │   ├── rscript
+│   │   │   │   ├── B.DupRate_plot.r
+│   │   │   │   ├── A.DupRate_plot.r
+│   │   │   │   ├── C.DupRate_plot.r
+│   │   │   │   ├── D.DupRate_plot.r
+│   │   ├── infer_experiment
+│   │   │   ├── D.infer_experiment.txt
+│   │   │   ├── B.infer_experiment.txt
+│   │   │   ├── A.infer_experiment.txt
+│   │   │   ├── C.infer_experiment.txt
+│   │   ├── junction_annotation
+│   │   │   ├── pdf
+│   │   │   │   ├── C.splice_junction.pdf
+│   │   │   │   ├── D.splice_junction.pdf
+│   │   │   │   ├── D.splice_events.pdf
+│   │   │   │   ├── C.splice_events.pdf
+│   │   │   │   ├── A.splice_junction.pdf
+│   │   │   │   ├── B.splice_events.pdf
+│   │   │   │   ├── A.splice_events.pdf
+│   │   │   │   ├── B.splice_junction.pdf
+│   │   │   ├── xls
+│   │   │   │   ├── D.junction.xls
+│   │   │   │   ├── B.junction.xls
+│   │   │   │   ├── A.junction.xls
+│   │   │   │   ├── C.junction.xls
+│   │   │   ├── rscript
+│   │   │   │   ├── B.junction_plot.r
+│   │   │   │   ├── D.junction_plot.r
+│   │   │   │   ├── A.junction_plot.r
+│   │   │   │   ├── C.junction_plot.r
+│   │   │   ├── log
+│   │   │   │   ├── C.junction_annotation.log
+│   │   │   │   ├── D.junction_annotation.log
+│   │   │   │   ├── A.junction_annotation.log
+│   │   │   │   ├── B.junction_annotation.log
+│   │   │   ├── bed
+│   │   │   │   ├── A.junction.bed
+│   │   │   │   ├── D.junction.bed
+│   │   │   │   ├── B.junction.Interact.bed
+│   │   │   │   ├── A.junction.Interact.bed
+│   │   │   │   ├── D.junction.Interact.bed
+│   │   │   │   ├── C.junction.Interact.bed
+│   │   │   │   ├── B.junction.bed
+│   │   │   │   ├── C.junction.bed
+│   │   ├── junction_saturation
+│   │   │   ├── pdf
+│   │   │   │   ├── C.junctionSaturation_plot.pdf
+│   │   │   │   ├── A.junctionSaturation_plot.pdf
+│   │   │   │   ├── D.junctionSaturation_plot.pdf
+│   │   │   │   ├── B.junctionSaturation_plot.pdf
+│   │   │   ├── rscript
+│   │   │   │   ├── C.junctionSaturation_plot.r
+│   │   │   │   ├── A.junctionSaturation_plot.r
+│   │   │   │   ├── B.junctionSaturation_plot.r
+│   │   │   │   ├── D.junctionSaturation_plot.r
+│   │   ├── bam_stat
+│   │   │   ├── B.bam_stat.txt
+│   │   │   ├── A.bam_stat.txt
+│   │   │   ├── C.bam_stat.txt
+│   │   │   ├── D.bam_stat.txt
+├── trimgalore
+│   ├── D_trimmed_1.fastq.gz_trimming_report.txt
+│   ├── D_trimmed_2.fastq.gz_trimming_report.txt
+│   ├── A_trimmed_1.fastq.gz_trimming_report.txt
+│   ├── B_trimmed_1.fastq.gz_trimming_report.txt
+│   ├── C_trimmed_1.fastq.gz_trimming_report.txt
+│   ├── A_trimmed_2.fastq.gz_trimming_report.txt
+│   ├── C_trimmed_2.fastq.gz_trimming_report.txt
+│   ├── B_trimmed_2.fastq.gz_trimming_report.txt
+├── fastqc
+│   ├── trim
+│   │   ├── D_trimmed_2_val_2_fastqc.zip
+│   │   ├── D_trimmed_1_val_1_fastqc.zip
+│   │   ├── C_trimmed_2_val_2_fastqc.html
+│   │   ├── C_trimmed_1_val_1_fastqc.html
+│   │   ├── A_trimmed_2_val_2_fastqc.html
+│   │   ├── B_trimmed_1_val_1_fastqc.html
+│   │   ├── D_trimmed_1_val_1_fastqc.html
+│   │   ├── C_trimmed_1_val_1_fastqc.zip
+│   │   ├── D_trimmed_2_val_2_fastqc.html
+│   │   ├── A_trimmed_1_val_1_fastqc.zip
+│   │   ├── B_trimmed_2_val_2_fastqc.zip
+│   │   ├── B_trimmed_1_val_1_fastqc.zip
+│   │   ├── B_trimmed_2_val_2_fastqc.html
+│   │   ├── A_trimmed_1_val_1_fastqc.html
+│   │   ├── C_trimmed_2_val_2_fastqc.zip
+│   │   ├── A_trimmed_2_val_2_fastqc.zip
+│   ├── raw
+│   │   ├── C_raw_1_fastqc.html
+│   │   ├── C_raw_2_fastqc.zip
+│   │   ├── A_raw_1_fastqc.zip
+│   │   ├── C_raw_2_fastqc.html
+│   │   ├── D_raw_1_fastqc.zip
+│   │   ├── B_raw_2_fastqc.html
+│   │   ├── B_raw_1_fastqc.html
+│   │   ├── B_raw_2_fastqc.zip
+│   │   ├── C_raw_1_fastqc.zip
+│   │   ├── A_raw_2_fastqc.html
+│   │   ├── A_raw_2_fastqc.zip
+│   │   ├── D_raw_1_fastqc.html
+│   │   ├── D_raw_2_fastqc.html
+│   │   ├── D_raw_2_fastqc.zip
+│   │   ├── A_raw_1_fastqc.html
+│   │   ├── B_raw_1_fastqc.zip
+├── pipeline_info
+│   ├── params_2026-01-10_16-28-23.json
+│   ├── pipeline_dag_2026-01-10_16-27-59.html
+│   ├── nf_core_rnaseq_software_mqc_versions.yml
+├── multiqc
+│   ├── star_salmon
+│   │   ├── multiqc_report.html
+│   │   ├── multiqc_report_plots
+│   │   │   ├── svg
+│   │   │   │   ├── star_summary_table.svg
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Events-cnt.svg
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts-log.svg
+│   │   │   │   ├── fastqc_raw_per_sequence_quality_scores_plot.svg
+│   │   │   │   ├── rseqc_inner_distance_plot_Percentages.svg
+│   │   │   │   ├── picard_deduplication-pct.svg
+│   │   │   │   ├── samtools_alignment_plot-pct.svg
+│   │   │   │   ├── fastqc_raw_per_base_n_content_plot.svg
+│   │   │   │   ├── rseqc_junction_saturation_plot_Novel_Junctions.svg
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions-cnt.svg
+│   │   │   │   ├── cutadapt_filtered_reads_plot-cnt.svg
+│   │   │   │   ├── rseqc_read_dups_plot.svg
+│   │   │   │   ├── rseqc_junction_saturation_plot_Known_Junctions.svg
+│   │   │   │   ├── cutadapt_trimmed_sequences_plot_3_Obs_Exp.svg
+│   │   │   │   ├── qualimap_genomic_origin-cnt.svg
+│   │   │   │   ├── fastqc_trimmed_sequence_duplication_levels_plot.svg
+│   │   │   │   ├── rseqc_junction_saturation_plot_All_Junctions.svg
+│   │   │   │   ├── star_alignment_plot-cnt.svg
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts-log.svg
+│   │   │   │   ├── fastqc_trimmed_per_sequence_quality_scores_plot.svg
+│   │   │   │   ├── star_alignment_plot-pct.svg
+│   │   │   │   ├── fastqc_raw_sequence_counts_plot-cnt.svg
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts-cnt.svg
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts-cnt.svg
+│   │   │   │   ├── rseqc_read_distribution_plot-cnt.svg
+│   │   │   │   ├── fastqc_raw-status-check-heatmap.svg
+│   │   │   │   ├── fastqc_raw_sequence_counts_plot-pct.svg
+│   │   │   │   ├── samtools-stats-dp.svg
+│   │   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Percentages.svg
+│   │   │   │   ├── fastqc_raw_per_base_sequence_quality_plot.svg
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions-pct.svg
+│   │   │   │   ├── fastqc_raw_adapter_content_plot.svg
+│   │   │   │   ├── cutadapt_filtered_reads_plot-pct.svg
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts-cnt.svg
+│   │   │   │   ├── samtools-flagstat-pct-table.svg
+│   │   │   │   ├── samtools-idxstats-xy-plot-cnt.svg
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts-log.svg
+│   │   │   │   ├── samtools_alignment_plot-cnt.svg
+│   │   │   │   ├── dupradar.svg
+│   │   │   │   ├── featurecounts_biotype_plot-pct.svg
+│   │   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Counts.svg
+│   │   │   │   ├── rseqc_bam_stat.svg
+│   │   │   │   ├── rseqc_infer_experiment_plot.svg
+│   │   │   │   ├── fastqc_raw_sequence_duplication_levels_plot.svg
+│   │   │   │   ├── rseqc_read_distribution_plot-pct.svg
+│   │   │   │   ├── fastqc_sequence_length_distribution_plot.svg
+│   │   │   │   ├── fastqc_trimmed_adapter_content_plot.svg
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Events-pct.svg
+│   │   │   │   ├── qualimap_gene_coverage_profile_Counts.svg
+│   │   │   │   ├── fastqc_trimmed_sequence_counts_plot-cnt.svg
+│   │   │   │   ├── picard_deduplication-cnt.svg
+│   │   │   │   ├── fastqc_trimmed_per_base_n_content_plot.svg
+│   │   │   │   ├── featurecounts_biotype_plot-cnt.svg
+│   │   │   │   ├── cutadapt_trimmed_sequences_plot_3_Counts.svg
+│   │   │   │   ├── fastqc_trimmed_sequence_counts_plot-pct.svg
+│   │   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Counts.svg
+│   │   │   │   ├── fastqc_trimmed-status-check-heatmap.svg
+│   │   │   │   ├── rseqc_inner_distance_plot_Counts.svg
+│   │   │   │   ├── qualimap_genomic_origin-pct.svg
+│   │   │   │   ├── samtools-flagstat-table.svg
+│   │   │   │   ├── fail_strand_check_table.svg
+│   │   │   │   ├── qualimap_gene_coverage_profile_Normalised.svg
+│   │   │   │   ├── star_salmon_deseq2_pca.svg
+│   │   │   │   ├── samtools-idxstats-xy-plot-pct.svg
+│   │   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Percentages.svg
+│   │   │   │   ├── star_salmon_deseq2_clustering.svg
+│   │   │   │   ├── fastqc_trimmed_per_base_sequence_quality_plot.svg
+│   │   │   ├── png
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts-log.png
+│   │   │   │   ├── qualimap_genomic_origin-pct.png
+│   │   │   │   ├── rseqc_junction_saturation_plot_Novel_Junctions.png
+│   │   │   │   ├── qualimap_gene_coverage_profile_Counts.png
+│   │   │   │   ├── rseqc_inner_distance_plot_Percentages.png
+│   │   │   │   ├── star_alignment_plot-cnt.png
+│   │   │   │   ├── picard_deduplication-cnt.png
+│   │   │   │   ├── cutadapt_trimmed_sequences_plot_3_Counts.png
+│   │   │   │   ├── samtools-idxstats-xy-plot-cnt.png
+│   │   │   │   ├── fastqc_trimmed_sequence_counts_plot-pct.png
+│   │   │   │   ├── rseqc_infer_experiment_plot.png
+│   │   │   │   ├── star_salmon_deseq2_clustering.png
+│   │   │   │   ├── samtools-idxstats-xy-plot-pct.png
+│   │   │   │   ├── featurecounts_biotype_plot-pct.png
+│   │   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Percentages.png
+│   │   │   │   ├── star_summary_table.png
+│   │   │   │   ├── rseqc_junction_saturation_plot_All_Junctions.png
+│   │   │   │   ├── fastqc_raw_sequence_counts_plot-cnt.png
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions-cnt.png
+│   │   │   │   ├── fastqc_raw-status-check-heatmap.png
+│   │   │   │   ├── samtools-flagstat-pct-table.png
+│   │   │   │   ├── fastqc_raw_sequence_counts_plot-pct.png
+│   │   │   │   ├── picard_deduplication-pct.png
+│   │   │   │   ├── fastqc_trimmed_adapter_content_plot.png
+│   │   │   │   ├── rseqc_read_distribution_plot-cnt.png
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Events-pct.png
+│   │   │   │   ├── featurecounts_biotype_plot-cnt.png
+│   │   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Percentages.png
+│   │   │   │   ├── star_alignment_plot-pct.png
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts-cnt.png
+│   │   │   │   ├── rseqc_junction_saturation_plot_Known_Junctions.png
+│   │   │   │   ├── fastqc_raw_per_sequence_quality_scores_plot.png
+│   │   │   │   ├── rseqc_bam_stat.png
+│   │   │   │   ├── fastqc_trimmed_per_base_n_content_plot.png
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts-cnt.png
+│   │   │   │   ├── samtools_alignment_plot-cnt.png
+│   │   │   │   ├── fastqc_trimmed_per_sequence_quality_scores_plot.png
+│   │   │   │   ├── fastqc_trimmed-status-check-heatmap.png
+│   │   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Counts.png
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts-log.png
+│   │   │   │   ├── samtools-stats-dp.png
+│   │   │   │   ├── rseqc_read_distribution_plot-pct.png
+│   │   │   │   ├── fastqc_sequence_length_distribution_plot.png
+│   │   │   │   ├── samtools-flagstat-table.png
+│   │   │   │   ├── fastqc_trimmed_sequence_duplication_levels_plot.png
+│   │   │   │   ├── fastqc_trimmed_per_base_sequence_quality_plot.png
+│   │   │   │   ├── cutadapt_filtered_reads_plot-cnt.png
+│   │   │   │   ├── star_salmon_deseq2_pca.png
+│   │   │   │   ├── qualimap_gene_coverage_profile_Normalised.png
+│   │   │   │   ├── dupradar.png
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts-log.png
+│   │   │   │   ├── cutadapt_filtered_reads_plot-pct.png
+│   │   │   │   ├── fastqc_raw_adapter_content_plot.png
+│   │   │   │   ├── rseqc_inner_distance_plot_Counts.png
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions-pct.png
+│   │   │   │   ├── fastqc_trimmed_sequence_counts_plot-cnt.png
+│   │   │   │   ├── samtools_alignment_plot-pct.png
+│   │   │   │   ├── cutadapt_trimmed_sequences_plot_3_Obs_Exp.png
+│   │   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Counts.png
+│   │   │   │   ├── qualimap_genomic_origin-cnt.png
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts-cnt.png
+│   │   │   │   ├── fastqc_raw_per_base_n_content_plot.png
+│   │   │   │   ├── fastqc_raw_per_base_sequence_quality_plot.png
+│   │   │   │   ├── fail_strand_check_table.png
+│   │   │   │   ├── fastqc_raw_sequence_duplication_levels_plot.png
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Events-cnt.png
+│   │   │   │   ├── rseqc_read_dups_plot.png
+│   │   │   ├── pdf
+│   │   │   │   ├── rseqc_read_dups_plot.pdf
+│   │   │   │   ├── qualimap_gene_coverage_profile_Normalised.pdf
+│   │   │   │   ├── fastqc_raw_sequence_counts_plot-cnt.pdf
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts-log.pdf
+│   │   │   │   ├── rseqc_read_distribution_plot-pct.pdf
+│   │   │   │   ├── fastqc_raw_per_base_n_content_plot.pdf
+│   │   │   │   ├── dupradar.pdf
+│   │   │   │   ├── rseqc_read_distribution_plot-cnt.pdf
+│   │   │   │   ├── qualimap_gene_coverage_profile_Counts.pdf
+│   │   │   │   ├── fastqc_trimmed_sequence_counts_plot-cnt.pdf
+│   │   │   │   ├── cutadapt_filtered_reads_plot-pct.pdf
+│   │   │   │   ├── featurecounts_biotype_plot-cnt.pdf
+│   │   │   │   ├── rseqc_junction_saturation_plot_Known_Junctions.pdf
+│   │   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Counts.pdf
+│   │   │   │   ├── rseqc_infer_experiment_plot.pdf
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Events-cnt.pdf
+│   │   │   │   ├── fastqc_raw_sequence_counts_plot-pct.pdf
+│   │   │   │   ├── fastqc_raw_sequence_duplication_levels_plot.pdf
+│   │   │   │   ├── cutadapt_trimmed_sequences_plot_3_Obs_Exp.pdf
+│   │   │   │   ├── fastqc_trimmed-status-check-heatmap.pdf
+│   │   │   │   ├── samtools-idxstats-xy-plot-pct.pdf
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts-cnt.pdf
+│   │   │   │   ├── qualimap_genomic_origin-cnt.pdf
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions-pct.pdf
+│   │   │   │   ├── rseqc_inner_distance_plot_Percentages.pdf
+│   │   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Percentages.pdf
+│   │   │   │   ├── fastqc_raw_per_sequence_quality_scores_plot.pdf
+│   │   │   │   ├── samtools-flagstat-pct-table.pdf
+│   │   │   │   ├── picard_deduplication-cnt.pdf
+│   │   │   │   ├── rseqc_bam_stat.pdf
+│   │   │   │   ├── fail_strand_check_table.pdf
+│   │   │   │   ├── fastqc_trimmed_per_base_sequence_quality_plot.pdf
+│   │   │   │   ├── fastqc_raw_adapter_content_plot.pdf
+│   │   │   │   ├── samtools-stats-dp.pdf
+│   │   │   │   ├── star_salmon_deseq2_pca.pdf
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions-cnt.pdf
+│   │   │   │   ├── fastqc_sequence_length_distribution_plot.pdf
+│   │   │   │   ├── rseqc_inner_distance_plot_Counts.pdf
+│   │   │   │   ├── samtools_alignment_plot-pct.pdf
+│   │   │   │   ├── rseqc_junction_annotation_junctions_plot_Events-pct.pdf
+│   │   │   │   ├── samtools_alignment_plot-cnt.pdf
+│   │   │   │   ├── fastqc_trimmed_sequence_duplication_levels_plot.pdf
+│   │   │   │   ├── star_salmon_deseq2_clustering.pdf
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts-log.pdf
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts-cnt.pdf
+│   │   │   │   ├── fastqc_trimmed_per_sequence_quality_scores_plot.pdf
+│   │   │   │   ├── fastqc_raw-status-check-heatmap.pdf
+│   │   │   │   ├── picard_deduplication-pct.pdf
+│   │   │   │   ├── fastqc_raw_per_base_sequence_quality_plot.pdf
+│   │   │   │   ├── rseqc_junction_saturation_plot_Novel_Junctions.pdf
+│   │   │   │   ├── rseqc_junction_saturation_plot_All_Junctions.pdf
+│   │   │   │   ├── fastqc_trimmed_sequence_counts_plot-pct.pdf
+│   │   │   │   ├── featurecounts_biotype_plot-pct.pdf
+│   │   │   │   ├── cutadapt_filtered_reads_plot-cnt.pdf
+│   │   │   │   ├── fastqc_trimmed_per_base_n_content_plot.pdf
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts-log.pdf
+│   │   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts-cnt.pdf
+│   │   │   │   ├── star_summary_table.pdf
+│   │   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Counts.pdf
+│   │   │   │   ├── samtools-flagstat-table.pdf
+│   │   │   │   ├── star_alignment_plot-pct.pdf
+│   │   │   │   ├── cutadapt_trimmed_sequences_plot_3_Counts.pdf
+│   │   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Percentages.pdf
+│   │   │   │   ├── samtools-idxstats-xy-plot-cnt.pdf
+│   │   │   │   ├── qualimap_genomic_origin-pct.pdf
+│   │   │   │   ├── fastqc_trimmed_adapter_content_plot.pdf
+│   │   │   │   ├── star_alignment_plot-cnt.pdf
+│   │   ├── multiqc_report_data
+│   │   │   ├── rseqc_junction_annotation_junctions_plot_Events.txt
+│   │   │   ├── picard_MarkIlluminaAdapters_histogram.txt
+│   │   │   ├── multiqc_fastqc_fastqc_raw.txt
+│   │   │   ├── multiqc_star.txt
+│   │   │   ├── star_alignment_plot.txt
+│   │   │   ├── star_summary_table.txt
+│   │   │   ├── multiqc.parquet
+│   │   │   ├── rseqc_inner_distance_plot_Percentages.txt
+│   │   │   ├── multiqc_picard_dups.txt
+│   │   │   ├── fastqc_sequence_length_distribution_plot.txt
+│   │   │   ├── fastqc_raw-status-check-heatmap.txt
+│   │   │   ├── samtools-stats-dp.txt
+│   │   │   ├── fastqc_trimmed_sequence_duplication_levels_plot.txt
+│   │   │   ├── samtools-flagstat-pct-table.txt
+│   │   │   ├── fastqc_trimmed_per_base_sequence_quality_plot.txt
+│   │   │   ├── multiqc.log
+│   │   │   ├── fastqc_raw_sequence_counts_plot.txt
+│   │   │   ├── rseqc_junction_saturation_plot_Novel_Junctions.txt
+│   │   │   ├── samtools-idxstats-mapped-reads-plot_Raw_Counts.txt
+│   │   │   ├── qualimap_gene_coverage_profile_Counts.txt
+│   │   │   ├── qualimap_gene_coverage_profile_Normalised.txt
+│   │   │   ├── llms-full.txt
+│   │   │   ├── fastqc_raw_per_base_n_content_plot.txt
+│   │   │   ├── rseqc_junction_saturation_plot_All_Junctions.txt
+│   │   │   ├── multiqc_samtools_flagstat.txt
+│   │   │   ├── fastqc_raw_per_base_sequence_quality_plot.txt
+│   │   │   ├── multiqc_fail_strand_check_table.txt
+│   │   │   ├── cutadapt_trimmed_sequences_plot_3_Counts.txt
+│   │   │   ├── qualimap_rnaseq_cov_hist.txt
+│   │   │   ├── multiqc_general_stats.txt
+│   │   │   ├── multiqc_citations.txt
+│   │   │   ├── qualimap_genomic_origin.txt
+│   │   │   ├── multiqc_software_versions.txt
+│   │   │   ├── rseqc_junction_annotation_junctions_plot_Junctions.txt
+│   │   │   ├── multiqc_dupradar.txt
+│   │   │   ├── picard_MeanQualityByCycle_histogram_1.txt
+│   │   │   ├── rseqc_junction_saturation_plot_Known_Junctions.txt
+│   │   │   ├── multiqc_featurecounts_biotype_plot.txt
+│   │   │   ├── picard_deduplication.txt
+│   │   │   ├── rseqc_read_distribution_plot.txt
+│   │   │   ├── picard_MeanQualityByCycle_histogram.txt
+│   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Percentages.txt
+│   │   │   ├── multiqc_cutadapt.txt
+│   │   │   ├── junction_saturation_known.txt
+│   │   │   ├── cutadapt_trimmed_sequences_plot_3_Obs_Exp.txt
+│   │   │   ├── fastqc_raw_adapter_content_plot.txt
+│   │   │   ├── junction_saturation_novel.txt
+│   │   │   ├── multiqc_data.json
+│   │   │   ├── multiqc_sources.txt
+│   │   │   ├── samtools-idxstats-xy-plot.txt
+│   │   │   ├── multiqc_samtools_stats.txt
+│   │   │   ├── samtools-idxstats-mapped-reads-plot_Normalised_Counts.txt
+│   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Percentages.txt
+│   │   │   ├── rseqc_read_dups.txt
+│   │   │   ├── multiqc_star_salmon_deseq2_pca.txt
+│   │   │   ├── fastqc_raw_per_sequence_quality_scores_plot.txt
+│   │   │   ├── fastqc_trimmed_per_sequence_quality_scores_plot.txt
+│   │   │   ├── rseqc_infer_experiment_plot.txt
+│   │   │   ├── rseqc_junction_saturation_all.txt
+│   │   │   ├── samtools-idxstats-mapped-reads-plot_Observed_over_Expected_Counts.txt
+│   │   │   ├── fastqc_trimmed_per_base_n_content_plot.txt
+│   │   │   ├── fastqc_trimmed_per_sequence_gc_content_plot_Counts.txt
+│   │   │   ├── qualimap_rnaseq_genome_results.txt
+│   │   │   ├── samtools_alignment_plot.txt
+│   │   │   ├── fastqc_trimmed_adapter_content_plot.txt
+│   │   │   ├── picard_QualityScoreDistribution_histogram.txt
+│   │   │   ├── rseqc_read_dups_plot.txt
+│   │   │   ├── rseqc_inner_distance_plot_Counts.txt
+│   │   │   ├── multiqc_rseqc_infer_experiment.txt
+│   │   │   ├── fastqc_raw_sequence_duplication_levels_plot.txt
+│   │   │   ├── samtools-flagstat-table.txt
+│   │   │   ├── multiqc_star_salmon_deseq2_clustering.txt
+│   │   │   ├── fastqc_trimmed-status-check-heatmap.txt
+│   │   │   ├── fastqc_trimmed_sequence_counts_plot.txt
+│   │   │   ├── multiqc_rseqc_junction_annotation.txt
+│   │   │   ├── multiqc_fastqc_fastqc_trimmed.txt
+│   │   │   ├── multiqc_samtools_idxstats.txt
+│   │   │   ├── multiqc_rseqc_bam_stat.txt
+│   │   │   ├── multiqc_rseqc_read_distribution.txt
+│   │   │   ├── rseqc_bam_stat.txt
+│   │   │   ├── fastqc_raw_per_sequence_gc_content_plot_Counts.txt
+│   │   │   ├── rseqc_inner_distance.txt
+│   │   │   ├── cutadapt_filtered_reads_plot.txt
+├── fq_lint
+│   ├── trimmed
+│   │   ├── D.fq_lint.txt
+│   │   ├── B.fq_lint.txt
+│   │   ├── C.fq_lint.txt
+│   │   ├── A.fq_lint.txt
+│   ├── raw
+│   │   ├── D.fq_lint.txt
+│   │   ├── B.fq_lint.txt
+│   │   ├── C.fq_lint.txt
+│   │   ├── A.fq_lint.txt
